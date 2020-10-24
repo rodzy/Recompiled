@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { theme } from '@chakra-ui/core';
 
-const prismBaseTheme = css`
+const baseTheme = css`
   code {
     white-space: pre;
   }
@@ -139,8 +139,8 @@ const prismBaseTheme = css`
   }
 `;
 
-export const prismLightTheme = css`
-  ${prismBaseTheme};
+export const lightTheme = css`
+  ${baseTheme};
   code[class*='language-'],
   pre[class*='language-'] {
     color: ${theme.colors.gray[800]};
@@ -155,8 +155,8 @@ export const prismLightTheme = css`
   }
 `;
 
-export const prismDarkTheme = css`
-  ${prismBaseTheme};
+export const darkTheme = css`
+  ${baseTheme};
   :not(pre) > code[class*='language-'] {
     background: #011627;
   }

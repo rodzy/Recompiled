@@ -7,7 +7,7 @@ import {
     useColorMode,
 } from "@chakra-ui/core";
 import { css, Global } from "@emotion/core";
-import { prismDarkTheme, prismLightTheme } from "../styles/styling";
+import { darkTheme, lightTheme } from "../styles/styling";
 import theme from "../styles/theme";
 
 interface StyleProps {
@@ -22,7 +22,7 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
             <CSSReset />
             <Global
                 styles={css`
-                    ${colorMode === "light" ? prismLightTheme : prismDarkTheme};
+                    ${colorMode === "light" ? lightTheme : darkTheme};
                     ::selection {
                         background-color: #00b034;
                         color: #fefefe;
@@ -30,6 +30,7 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
                     html {
                         min-width: 360px;
                         scroll-behavior: smooth;
+                        background: ${colorMode === "light" ? "white" : "#000"};
                     }
                     #__next {
                         display: flex;
@@ -47,7 +48,7 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={theme}>
-            <ColorModeProvider value="light">
+            <ColorModeProvider value="dark">
                 <GlobalStyle>
                     <Component {...pageProps} />
                 </GlobalStyle>

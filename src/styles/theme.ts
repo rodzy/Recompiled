@@ -15,7 +15,7 @@ const theme: DefaultTheme = {
         thin: 100,
         light: 200,
         semibold: 800,
-        black: 1000,
+        black: 800,
     },
     icons: {
         ...chakraTheme.icons,
