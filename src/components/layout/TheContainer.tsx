@@ -5,9 +5,11 @@ import {
     Box,
     Stack,
     Button,
+    Text,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Footer from "./TheFooter";
 
 interface Props {
@@ -24,6 +26,7 @@ const StickyNav = styled(Flex)`
 
 const Container: React.FC<Props> = ({ children }) => {
     const { colorMode, toggleColorMode } = useColorMode();
+    const router = useRouter();
 
     const bg = {
         light: "#fff",
@@ -62,18 +65,26 @@ const Container: React.FC<Props> = ({ children }) => {
                     maxWidth="900px"
                     width="100%"
                 >
-                    <Box>Recompiled</Box>
                     <Box>
-                        <Link href="/" passHref>
-                            <Button as="a" variant="ghost" p={[1, 4]}>
-                                Home
-                            </Button>
-                        </Link>
-                        <Link href="/newsletter" passHref>
-                            <Button as="a" variant="ghost" p={[1, 4]}>
-                                Newsletter
-                            </Button>
-                        </Link>
+                        <Text as="h1" fontSize={25} fontWeight={800}>
+                            <span style={{ color: "#00b034" }}>Re</span>compiled
+                        </Text>
+                    </Box>
+                    <Box>
+                        {router.pathname !== "/" && (
+                            <Link href="/" passHref>
+                                <Button as="a" variant="ghost" p={[1, 4]}>
+                                    Home
+                                </Button>
+                            </Link>
+                        )}
+                        {router.pathname === "/" && (
+                            <Link href="/newsletter" passHref>
+                                <Button as="a" variant="ghost" p={[1, 4]}>
+                                    Newsletter
+                                </Button>
+                            </Link>
+                        )}
                         <IconButton
                             aria-label="Toggle dark mode"
                             icon={colorMode === "dark" ? "sun" : "moon"}
@@ -92,8 +103,8 @@ const Container: React.FC<Props> = ({ children }) => {
                 px={8}
             >
                 {children}
+                <Footer />
             </Flex>
-            <Footer text="In page"/>
         </>
     );
 };
