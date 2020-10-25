@@ -53,7 +53,7 @@ const Container: React.FC<Props> = ({ children }) => {
                 width="100%"
                 bg={navBgColor[colorMode]}
                 as="nav"
-                p={2}
+                p={3}
                 mt={[0, 8]}
                 mb={8}
                 mx="auto"
@@ -66,7 +66,7 @@ const Container: React.FC<Props> = ({ children }) => {
                     width="100%"
                 >
                     <Box>
-                        <Text as="h1" fontSize={25} fontWeight={800}>
+                        <Text as="h1" fontSize={25} fontWeight={800} pt={2}>
                             <span style={{ color: "#00b034" }}>Re</span>compiled
                         </Text>
                     </Box>

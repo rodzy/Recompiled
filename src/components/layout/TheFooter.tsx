@@ -5,29 +5,29 @@ import React from "react";
 const Footer: React.FC = () => {
     return (
         <Flex align="center" mb={4} direction="column">
-            <div>
+            <Flex align="center" wrap="wrap">
                 <NextLink href="/about" passHref>
                     <Link
-                        fontSize="sm"
+                        fontSize="md"
                         minWidth="100px"
                         mr={2}
                         title="About me"
                     >
-                        about me ↗
+                        about ↗
                     </Link>
                 </NextLink>
                 <Link
-                    href="mailto:irod2899@gmail.com"
-                    title="Email"
+                    href="https://twitter.com/rodzyrm"
+                    title="Twitter"
                     isExternal
-                    fontSize="sm"
+                    fontSize="md"
                     minWidth="100px"
                     mr={2}
                 >
-                    email ↗
+                    twitter ↗
                 </Link>
                 <Link
-                    fontSize="sm"
+                    fontSize="md"
                     minWidth="100px"
                     mr={2}
                     href="https://github.com/rodzy"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                     github ↗
                 </Link>
                 <Link
-                    fontSize="sm"
+                    fontSize="md"
                     minWidth="100px"
                     isExternal
                     href="https://www.linkedin.com/in/isaac-rodriguez-m/"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 </Link>
                 <NextLink href="/newsletter" passHref>
                     <Link
-                        fontSize="sm"
+                        fontSize="md"
                         minWidth="100px"
                         mr={2}
                         title="Newsletter"
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                         newsletter ↗
                     </Link>
                 </NextLink>
-            </div>
+            </Flex>
         </Flex>
     );
 };
