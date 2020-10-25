@@ -4,7 +4,6 @@ import {
     IconButton,
     Box,
     Stack,
-    Button,
     Text,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
@@ -54,7 +53,7 @@ const Container: React.FC<Props> = ({ children }) => {
                 bg={navBgColor[colorMode]}
                 as="nav"
                 p={3}
-                mt={[0, 8]}
+                mt={[0, 3]}
                 mb={8}
                 mx="auto"
             >
@@ -66,27 +65,52 @@ const Container: React.FC<Props> = ({ children }) => {
                     width="100%"
                 >
                     <Box>
-                        <Text as="h1" fontSize={25} fontWeight={800} pt={2}>
+                        <Text as="h1" fontSize={23} fontWeight={800} pt={2}>
                             <span style={{ color: "#00b034" }}>Re</span>compiled
                         </Text>
                     </Box>
                     <Box>
-                        {router.pathname !== "/" && (
+                        {router.pathname !== "/about" ? (
+                            <Link href="/about" passHref>
+                                <IconButton
+                                    aria-label="About me"
+                                    variant="outline"
+                                    icon="attachment"
+                                    ml={3}
+                                />
+                            </Link>
+                        ) : (
                             <Link href="/" passHref>
-                                <Button as="a" variant="ghost" p={[1, 4]}>
-                                    Home
-                                </Button>
+                                <IconButton
+                                    aria-label="Back to the homepage"
+                                    variant="outline"
+                                    icon="triangle-up"
+                                    ml={3}
+                                />
                             </Link>
                         )}
-                        {router.pathname === "/" && (
+                        {router.pathname !== "/newsletter" ? (
                             <Link href="/newsletter" passHref>
-                                <Button as="a" variant="ghost" p={[1, 4]}>
-                                    Newsletter
-                                </Button>
+                                <IconButton
+                                    aria-label="Subscribe to the newsletter"
+                                    variant="outline"
+                                    icon="bell"
+                                    ml={3}
+                                />
+                            </Link>
+                        ) : (
+                            <Link href="/" passHref>
+                                <IconButton
+                                    aria-label="Back to the homepage"
+                                    variant="outline"
+                                    icon="triangle-up"
+                                    ml={3}
+                                />
                             </Link>
                         )}
                         <IconButton
                             aria-label="Toggle dark mode"
+                            variant="outline"
                             icon={colorMode === "dark" ? "sun" : "moon"}
                             onClick={toggleColorMode}
                             ml={3}
