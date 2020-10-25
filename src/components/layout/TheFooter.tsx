@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
                 <NextLink href="/about" passHref>
                     <Link
                         fontSize="sm"
-                        color="gray.500"
                         minWidth="100px"
                         mr={2}
                         title="About me"
@@ -22,7 +21,6 @@ const Footer: React.FC = () => {
                     title="Email"
                     isExternal
                     fontSize="sm"
-                    color="gray.500"
                     minWidth="100px"
                     mr={2}
                 >
@@ -30,7 +28,6 @@ const Footer: React.FC = () => {
                 </Link>
                 <Link
                     fontSize="sm"
-                    color="gray.500"
                     minWidth="100px"
                     mr={2}
                     href="https://github.com/rodzy"
@@ -41,7 +38,6 @@ const Footer: React.FC = () => {
                 </Link>
                 <Link
                     fontSize="sm"
-                    color="gray.500"
                     minWidth="100px"
                     isExternal
                     href="https://www.linkedin.com/in/isaac-rodriguez-m/"
@@ -53,7 +49,6 @@ const Footer: React.FC = () => {
                 <NextLink href="/newsletter" passHref>
                     <Link
                         fontSize="sm"
-                        color="gray.500"
                         minWidth="100px"
                         mr={2}
                         title="Newsletter"

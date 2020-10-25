@@ -53,7 +53,7 @@ const Container: React.FC<Props> = ({ children }) => {
                 width="100%"
                 bg={navBgColor[colorMode]}
                 as="nav"
-                p={5}
+                p={2}
                 mt={[0, 8]}
                 mb={8}
                 mx="auto"

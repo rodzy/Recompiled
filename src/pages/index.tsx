@@ -45,6 +45,46 @@ const Index: NextPage = () => {
                             suscipit iure ex reprehenderit, a consectetur
                             nostrum nihil accusantium aperiam numquam.
                         </Text>
+                        <Text color={secondaryTextColor[colorMode]}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Obcaecati placeat, eius magni praesentium
+                            dignissimos magnam eos pariatur molestias voluptas
+                            suscipit iure ex reprehenderit, a consectetur
+                            nostrum nihil accusantium aperiam numquam.
+                        </Text>
+                        <Text color={secondaryTextColor[colorMode]}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Obcaecati placeat, eius magni praesentium
+                            dignissimos magnam eos pariatur molestias voluptas
+                            suscipit iure ex reprehenderit, a consectetur
+                            nostrum nihil accusantium aperiam numquam.
+                        </Text>
+                        <Text color={secondaryTextColor[colorMode]}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Obcaecati placeat, eius magni praesentium
+                            dignissimos magnam eos pariatur molestias voluptas
+                            suscipit iure ex reprehenderit, a consectetur
+                            nostrum nihil accusantium aperiam numquam.
+                        </Text>
+                        <Text color={secondaryTextColor[colorMode]}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Obcaecati placeat, eius magni praesentium
+                            dignissimos magnam eos pariatur molestias voluptas
+                            suscipit iure ex reprehenderit, a consectetur
+                            nostrum nihil accusantium aperiam numquam.
+                        </Text>
+                        <Text color={secondaryTextColor[colorMode]}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Obcaecati placeat, eius magni praesentium
+                            dignissimos magnam eos pariatur molestias voluptas
+                            suscipit iure ex reprehenderit, a consectetur
+                            nostrum nihil accusantium aperiam numquam.
+                        </Text>
+                        <pre>
+                            <code>
+                                const hi="Hi"
+                            </code>
+                        </pre>
                     </Flex>
                     <Flex
                         flexDirection="column"
