@@ -24,7 +24,9 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
                 styles={css`
                     ${colorMode === "light" ? lightTheme : darkTheme};
                     ::selection {
-                        background-color: #00b034;
+                        background-color: ${colorMode === "light"
+                            ? "#48BB78"
+                            : "#48BB78"};
                         color: #fefefe;
                     }
                     html {

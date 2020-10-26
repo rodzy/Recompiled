@@ -7,10 +7,10 @@ import {
     Text,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import Footer from "./TheFooter";
-import { miscTextColor, navBgColor, bg, pText } from '../../styles/colors';
+import { miscTextColor, navBgColor, bg, pText } from "../../styles/colors";
 
 interface Props {
     children: React.ReactNode;
@@ -51,52 +51,62 @@ const Container: React.FC<Props> = ({ children }) => {
                     width="100%"
                 >
                     <Box>
-                        
-                        <Text as="h1" fontSize={23} fontWeight={800} pt={2}>
-                            <Text as="span" color={miscTextColor[colorMode]}>
-                                Re
+                        <NextLink href="/" passHref>
+                            <Text
+                                as="h1"
+                                fontSize={23}
+                                fontWeight={800}
+                                pt={2}
+                                cursor="pointer"
+                            >
+                                <Text
+                                    as="span"
+                                    color={miscTextColor[colorMode]}
+                                >
+                                    Re
+                                </Text>
+                                compiled
                             </Text>
-                            compiled
-                        </Text>
+                        </NextLink>
                     </Box>
                     <Box>
                         {router.pathname !== "/about" ? (
-                            <Link href="/about" passHref>
+                            <NextLink href="/about" passHref>
                                 <IconButton
                                     aria-label="About me"
                                     variant="outline"
                                     icon="attachment"
                                     ml={3}
                                 />
-                            </Link>
+                            </NextLink>
                         ) : (
-                            <Link href="/" passHref>
+                            <NextLink href="/" passHref>
                                 <IconButton
                                     aria-label="Back to the homepage"
                                     variant="outline"
                                     icon="triangle-up"
                                     ml={3}
                                 />
-                            </Link>
+                            </NextLink>
                         )}
                         {router.pathname !== "/newsletter" ? (
-                            <Link href="/newsletter" passHref>
+                            <NextLink href="/newsletter" passHref>
                                 <IconButton
                                     aria-label="Subscribe to the newsletter"
                                     variant="outline"
                                     icon="bell"
                                     ml={3}
                                 />
-                            </Link>
+                            </NextLink>
                         ) : (
-                            <Link href="/" passHref>
+                            <NextLink href="/" passHref>
                                 <IconButton
                                     aria-label="Back to the homepage"
                                     variant="outline"
                                     icon="triangle-up"
                                     ml={3}
                                 />
-                            </Link>
+                            </NextLink>
                         )}
                         <IconButton
                             aria-label="Toggle dark mode"
