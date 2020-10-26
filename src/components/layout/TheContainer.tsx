@@ -10,6 +10,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Footer from "./TheFooter";
+import { miscTextColor, navBgColor, bg, pText } from '../../styles/colors';
 
 interface Props {
     children: React.ReactNode;
@@ -26,21 +27,6 @@ const StickyNav = styled(Flex)`
 const Container: React.FC<Props> = ({ children }) => {
     const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
-
-    const bg = {
-        light: "#fff",
-        dark: "#000",
-    };
-
-    const pText = {
-        light: "#000",
-        dark: "#fff",
-    };
-
-    const navBgColor = {
-        light: "rgba(255, 255, 255, 0.8)",
-        dark: "#000",
-    };
 
     return (
         <>
@@ -65,8 +51,12 @@ const Container: React.FC<Props> = ({ children }) => {
                     width="100%"
                 >
                     <Box>
+                        
                         <Text as="h1" fontSize={23} fontWeight={800} pt={2}>
-                            <span style={{ color: "#00b034" }}>Re</span>compiled
+                            <Text as="span" color={miscTextColor[colorMode]}>
+                                Re
+                            </Text>
+                            compiled
                         </Text>
                     </Box>
                     <Box>

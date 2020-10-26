@@ -2,14 +2,11 @@ import { Heading, Stack, Text, Flex, useColorMode } from "@chakra-ui/core";
 import { NextPage } from "next";
 import Head from "next/head";
 import Container from "../components/layout/TheContainer";
+import { secondaryTextColor } from '../styles/colors';
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
-    const secondaryTextColor = {
-        light: "gray.700",
-        dark: "gray.400",
-    };
-
+    
     return (
         <>
             <Head>
