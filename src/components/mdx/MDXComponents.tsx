@@ -10,7 +10,6 @@ import {
     Divider,
     useColorMode,
 } from "@chakra-ui/core";
-import { jsx } from "@emotion/core";
 import NextLink from "next/link";
 
 const Table = (props: any) => (
@@ -55,8 +54,8 @@ const TData = (props: any) => {
 const CustomLink = (props: any) => {
     const { colorMode } = useColorMode();
     const color = {
-        light: "hsl(208, 99%, 44%)",
-        dark: "hsl(208, 95%, 68%)",
+        light: "#008a1e",
+        dark: "#48BB78",
     };
 
     const href = props.href;
@@ -77,8 +76,8 @@ const CustomLink = (props: any) => {
 const Quote = (props: any) => {
     const { colorMode } = useColorMode();
     const bgColor = {
-        light: "blue.50",
-        dark: "blue.900",
+        light: "green.50",
+        dark: "green.900",
     };
 
     return (
@@ -136,7 +135,7 @@ const DocsHeading = (props: any) => {
                         }}
                         opacity={0}
                         ml="0.375rem"
-                        href={`#${props.id}`}
+                        
                     >
                         #
                     </PseudoBox>
