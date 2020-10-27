@@ -67,17 +67,7 @@ const NotFound: NextPage = () => {
                                     mb={3}
                                     w="100%"
                                 >
-                                    Go back to the home page
-                                </Button>
-                            </NextLink>
-                            <NextLink href="/about" passHref>
-                                <Button
-                                    as="a"
-                                    variant="outline"
-                                    mb={3}
-                                    w="100%"
-                                >
-                                    Go back to the about page
+                                    Go back in time
                                 </Button>
                             </NextLink>
                             <NextLink href="/newsletter" passHref>
