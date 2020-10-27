@@ -10,7 +10,6 @@ import {
 import { NextPage } from "next";
 import Head from "next/head";
 import NextLink from "next/link";
-import Container from "../components/layout/TheContainer";
 import { secondaryTextColor, miscTextColor } from "../styles/colors";
 
 const NotFound: NextPage = () => {
