@@ -1,7 +1,6 @@
 import { Heading, Stack, Text, Flex, useColorMode } from "@chakra-ui/core";
 import { NextPage } from "next";
 import Head from "next/head";
-import Container from "../components/layout/TheContainer";
 import { secondaryTextColor } from '../styles/colors';
 
 const Index: NextPage = () => {
@@ -12,7 +11,7 @@ const Index: NextPage = () => {
             <Head>
                 <title>Recompiled — Isaac Rodríguez Dev Journey</title>
             </Head>
-            <Container>
+
                 <Stack
                     as="main"
                     spacing={8}
@@ -100,7 +99,6 @@ const Index: NextPage = () => {
                         </Heading>
                     </Flex>
                 </Stack>
-            </Container>
         </>
     );
 };

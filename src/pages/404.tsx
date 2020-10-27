@@ -22,7 +22,6 @@ const NotFound: NextPage = () => {
                 <title>404 — Page not found 🥶</title>
                 <meta name="description" content="Error 404: Page not found" />
             </Head>
-            <Container>
                 <Stack
                     as="main"
                     spacing={8}
@@ -83,7 +82,6 @@ const NotFound: NextPage = () => {
                         </div>
                     </Flex>
                 </Stack>
-            </Container>
         </>
     );
 };

@@ -9,6 +9,9 @@ import {
 import { css, Global } from "@emotion/core";
 import { darkTheme, lightTheme } from "../styles/styling";
 import theme from "../styles/theme";
+import { MDXProvider } from "@mdx-js/react";
+import MDXComponents from "../components/mdx/MDXComponents";
+import Container from "../components/layout/TheContainer";
 
 interface StyleProps {
     children: React.ReactNode;
@@ -50,11 +53,15 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={theme}>
-            <ColorModeProvider value="dark">
-                <GlobalStyle>
-                    <Component {...pageProps} />
-                </GlobalStyle>
-            </ColorModeProvider>
+            <MDXProvider components={MDXComponents}>
+                <ColorModeProvider value="dark">
+                    <GlobalStyle>
+                        <Container>
+                            <Component {...pageProps} />
+                        </Container>
+                    </GlobalStyle>
+                </ColorModeProvider>
+            </MDXProvider>
         </ThemeProvider>
     );
 }

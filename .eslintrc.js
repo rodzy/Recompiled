@@ -27,6 +27,7 @@ module.exports = {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-explicit-any":"off",
         "react/no-unescaped-entities": "off",
-        "react/prop-types":"off"
+        "react/prop-types": "off",
+        "react/display-name":"off"
     }
 };
