@@ -1,11 +1,13 @@
-import { Flex, Link } from "@chakra-ui/core";
+import { Box, Flex, Link } from "@chakra-ui/core";
 import NextLink from "next/link";
 import React from "react";
 
 const Footer: React.FC = () => {
+    const date = new Date();
+
     return (
         <Flex align="center" mb={4} direction="column">
-            <Flex align="center" wrap="wrap">
+            <Flex align="center" wrap="wrap" justifyContent="center" >
                 <NextLink href="/about" passHref>
                     <Link
                         fontSize="md"
@@ -13,7 +15,7 @@ const Footer: React.FC = () => {
                         mr={2}
                         title="About me"
                     >
-                        about ↗
+                        About ↗
                     </Link>
                 </NextLink>
                 <Link
@@ -24,7 +26,7 @@ const Footer: React.FC = () => {
                     minWidth="100px"
                     mr={2}
                 >
-                    twitter ↗
+                    Twitter ↗
                 </Link>
                 <Link
                     fontSize="md"
@@ -34,7 +36,7 @@ const Footer: React.FC = () => {
                     title="GitHub"
                     isExternal
                 >
-                    github ↗
+                    Github ↗
                 </Link>
                 <Link
                     fontSize="md"
@@ -44,7 +46,7 @@ const Footer: React.FC = () => {
                     mr={2}
                     title="LinkedIn"
                 >
-                    linkedin ↗
+                    LinkedIn ↗
                 </Link>
                 <NextLink href="/newsletter" passHref>
                     <Link
@@ -53,10 +55,13 @@ const Footer: React.FC = () => {
                         mr={2}
                         title="Newsletter"
                     >
-                        newsletter ↗
+                        Newsletter ↗
                     </Link>
                 </NextLink>
             </Flex>
+            <Box pt={3}>
+                <p>&copy; {date.getFullYear()} - Isaac Rodríguez</p>
+            </Box>
         </Flex>
     );
 };
