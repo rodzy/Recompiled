@@ -77,7 +77,7 @@ const Quote = (props: any) => {
     const { colorMode } = useColorMode();
     const bgColor = {
         light: "green.50",
-        dark: "green.900",
+        dark: "rgb(13 0 212 / 8%)",
     };
 
     return (
@@ -87,6 +87,7 @@ const Quote = (props: any) => {
             bg={bgColor[colorMode]}
             variant="left-accent"
             status="info"
+            borderColor={"#673ab7"}
             css={{
                 "> *:first-of-type": {
                     marginTop: 0,

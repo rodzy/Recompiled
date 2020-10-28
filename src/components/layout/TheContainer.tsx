@@ -4,13 +4,13 @@ import {
     IconButton,
     Box,
     Stack,
-    Text,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import Footer from "./TheFooter";
-import { miscTextColor, navBgColor, bg, pText } from "../../styles/colors";
+import { navBgColor, bg, pText } from "../../styles/colors";
+import NextImage from "next/image";
 
 interface Props {
     children: React.ReactNode;
@@ -39,7 +39,7 @@ const Container: React.FC<Props> = ({ children }) => {
                 bg={navBgColor[colorMode]}
                 as="nav"
                 p={3}
-                mt={[0, 3]}
+                mt={[0, 6]}
                 mb={8}
                 mx="auto"
             >
@@ -51,22 +51,18 @@ const Container: React.FC<Props> = ({ children }) => {
                     width="100%"
                 >
                     <Box>
-                        <NextLink href="/" passHref>
-                            <Text
-                                as="h1"
-                                fontSize={23}
-                                fontWeight={800}
-                                pt={2}
-                                cursor="pointer"
-                            >
-                                <Text
-                                    as="span"
-                                    color={miscTextColor[colorMode]}
-                                >
-                                    Re
-                                </Text>
-                                compiled
-                            </Text>
+                        <NextLink href="/">
+                            <div>
+                                <NextImage
+                                    src="/images/Recompiled.png"
+                                    width={35}
+                                    height={35}
+                                    alt="Recompiled - Logo"
+                                    role="image"
+                                    loading="lazy"
+                                    className="logo-img"
+                                />
+                            </div>
                         </NextLink>
                     </Box>
                     <Box>

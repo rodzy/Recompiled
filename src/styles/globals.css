@@ -14,3 +14,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+article{
+    letter-spacing: normal;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 3rem auto;
+    max-width: 900px;
+}
+
+.logo-img{
+    margin: 0.4rem;
+    cursor: pointer;
+}

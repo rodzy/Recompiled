@@ -23,7 +23,7 @@ class MyDocument extends Document {
                         property="og:image"
                         content="https://avatars1.githubusercontent.com/u/49137701?s=400&u=35e7614cc3215c045b58b4e352bd0616b9d795fd&v=4"
                     />
-                    <link rel="icon" href="favicon-rm.ico" />
+                    <link rel="icon" href="/icons/favicon-rm.ico" />
                 </Head>
                 <body>
                     <Main />
