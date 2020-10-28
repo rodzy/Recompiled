@@ -135,7 +135,6 @@ const DocsHeading = (props: any) => {
                         }}
                         opacity={0}
                         ml="0.375rem"
-                        
                     >
                         #
                     </PseudoBox>
@@ -163,8 +162,9 @@ const MDXComponents = {
     h3: (props: any) => (
         <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />
     ),
+
     inlineCode: (props: any) => (
-        <Code variantColor="yellow" fontSize="0.84em" {...props} />
+        <Code variantColor="green" fontSize="0.84em" {...props} />
     ),
     kbd: Kbd,
     br: (props: any) => <Box height="24px" {...props} />,

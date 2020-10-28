@@ -28,20 +28,20 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
                     ${colorMode === "light" ? lightTheme : darkTheme};
                     ::selection {
                         background-color: ${colorMode === "light"
-                            ? "#48BB78"
-                            : "#48BB78"};
+                            ? "#ef8354"
+                            : "#ef8354"};
                         color: #fefefe;
                     }
                     html {
                         min-width: 360px;
                         scroll-behavior: smooth;
-                        background: ${colorMode === "light" ? "white" : "#000"};
+                        background: ${colorMode === "light" ? "#fafbfc" : "#131415"};
                     }
                     #__next {
                         display: flex;
                         flex-direction: column;
                         min-height: 100vh;
-                        background: ${colorMode === "light" ? "white" : "#000"};
+                        background: ${colorMode === "light" ? "#fafbfc" : "#131415"};
                     }
                 `}
             />

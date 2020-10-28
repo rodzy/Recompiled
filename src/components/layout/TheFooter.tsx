@@ -6,8 +6,8 @@ const Footer: React.FC = () => {
     const date = new Date();
 
     return (
-        <Flex align="center" mb={4} direction="column">
-            <Flex align="center" wrap="wrap" justifyContent="center" >
+        <Flex align="center" justifyContent="center" mb={4} direction="column">
+            <Flex align="center" wrap="wrap" justifyContent="center">
                 <NextLink href="/about" passHref>
                     <Link
                         fontSize="md"
@@ -38,16 +38,6 @@ const Footer: React.FC = () => {
                 >
                     Github ↗
                 </Link>
-                <Link
-                    fontSize="md"
-                    minWidth="100px"
-                    isExternal
-                    href="https://www.linkedin.com/in/isaac-rodriguez-m/"
-                    mr={2}
-                    title="LinkedIn"
-                >
-                    LinkedIn ↗
-                </Link>
                 <NextLink href="/newsletter" passHref>
                     <Link
                         fontSize="md"
@@ -59,7 +49,7 @@ const Footer: React.FC = () => {
                     </Link>
                 </NextLink>
             </Flex>
-            <Box pt={3}>
+            <Box pt={3} pr={8}>
                 <p>&copy; {date.getFullYear()} - Isaac Rodríguez</p>
             </Box>
         </Flex>

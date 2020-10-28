@@ -1,26 +1,26 @@
 import { Color } from "../types/colors.type";
 
 export const secondaryTextColor: Color = {
-    light: "gray.700",
-    dark: "gray.400",
+    light: "#4f5d75",
+    dark: "#bfc0c0",
 };
 
 export const miscTextColor: Color = {
-    light: "green.500",
-    dark: "green.300",
+    light: "#ef8354",
+    dark: "#ef8354",
 };
 
 export const bg: Color = {
-    light: "#fff",
-    dark: "#000",
+    light: "#fafbfc",
+    dark: "#131415",
 };
 
 export const pText: Color = {
     light: "#000",
-    dark: "#fff",
+    dark: "#fafbfc",
 };
 
 export const navBgColor: Color = {
     light: "rgba(255, 255, 255, 0.8)",
-    dark: "#000",
+    dark: "rgba(19,20,21,0.45)",
 };
