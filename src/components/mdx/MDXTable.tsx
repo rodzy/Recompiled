@@ -1,4 +1,5 @@
 import { Box, useColorMode } from "@chakra-ui/core";
+
 export const Table: React.FC = (props: any) => (
     <Box overflowX="scroll" w="full">
         <Box as="table" textAlign="left" mt="32px" w="full" {...props} />

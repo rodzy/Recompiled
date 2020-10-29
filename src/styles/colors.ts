@@ -6,8 +6,8 @@ export const secondaryTextColor: Color = {
 };
 
 export const miscTextColor: Color = {
-    light: "#ef8354",
-    dark: "#ef8354",
+    light: "rgba(25,166,67,1)",
+    dark: "rgba(25,166,67,1)",
 };
 
 export const bg: Color = {

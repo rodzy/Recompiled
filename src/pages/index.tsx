@@ -1,8 +1,24 @@
-import { Heading, Stack, Text, Flex, useColorMode } from "@chakra-ui/core";
+import {
+    Heading,
+    Stack,
+    Text,
+    Flex,
+    useColorMode,
+    Link,
+} from "@chakra-ui/core";
 import { NextPage } from "next";
 import Head from "next/head";
 import { secondaryTextColor } from "../styles/colors";
+import NextLink from "next/link";
+import styled from "@emotion/styled";
 
+const LearnLink = styled(Link)`
+    text-decoration:underline;
+    &:hover {
+        color: rgba(25, 166, 67, 1);
+        text-decoration:none;
+    }
+`;
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
@@ -10,9 +26,8 @@ const Index: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Recompiled — Isaac Rodríguez Dev Journey</title>
+                <title>Recompiled — Isaac Rodríguez Digital Garden</title>
             </Head>
-
             <Stack
                 as="main"
                 spacing={8}
@@ -22,26 +37,40 @@ const Index: NextPage = () => {
                 maxWidth="900px"
             >
                 <Flex
+                    as="section"
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="780px"
+                    maxWidth="800px"
                 >
                     <Heading
                         letterSpacing="tight"
                         mb={2}
                         as="h1"
-                        fontSize={["5xl","6xl"]}
+                        fontSize={["5xl", "6xl"]}
                     >
                         Recompiled
                     </Heading>
-                    <Text
-                        as="p"
+                    <Heading
+                        as="h2"
                         color={secondaryTextColor[colorMode]}
-                        fontSize={["xl","3xl"]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3,6]}
+                        pr={[0, "6rem"]}
+                        lineHeight={["normal", "short"]}
                     >
-                        A blog by @rodzy
-                    </Text>
+                        A digital space for blog posts, notes and ideas about
+                        programming and the modern web from Isaac Rodríguez
+                        perspective.
+                    </Heading>
+                    <Heading as="h3" fontSize={["xl", "2xl"]}>
+                        Who is Isaac Rodríguez?{" "}
+                        <NextLink href="/about" passHref>
+                            <LearnLink color={secondaryTextColor[colorMode]}>
+                                About him
+                            </LearnLink>
+                        </NextLink>
+                    </Heading>
                     <Text color={secondaryTextColor[colorMode]}>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Obcaecati placeat, eius magni praesentium
@@ -79,6 +108,7 @@ const Index: NextPage = () => {
                     </Text>
                 </Flex>
                 <Flex
+                    as="section"
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
