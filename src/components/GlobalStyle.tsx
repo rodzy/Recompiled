@@ -35,7 +35,7 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
                         min-height: 100vh;
                         background: ${colorMode === "light"
                             ? "rgba(255, 255, 255, 0.8)"
-                            : "#131415"};
+                            : "rgba(19,20,21,0.45)"};
                     }
                 `}
             />

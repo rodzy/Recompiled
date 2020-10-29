@@ -12,7 +12,7 @@ export const miscTextColor: Color = {
 
 export const bg: Color = {
     light: "rgba(255, 255, 255, 0.8)",
-    dark: "#131415",
+    dark: "rgba(19,20,21,0.45)",
 };
 
 export const pText: Color = {

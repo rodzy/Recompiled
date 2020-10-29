@@ -1,4 +1,5 @@
 import { DefaultTheme, theme as chakraTheme } from "@chakra-ui/core";
+import { customIcons } from "./icons";
 
 const theme: DefaultTheme = {
     ...chakraTheme,
@@ -36,20 +37,21 @@ const theme: DefaultTheme = {
         xl: "",
         "2xl": "",
         inner: "",
-        none:"",
-        outline:"0 0 0 3px rgb(76 175 80 / 64%)"
+        none: "",
+        outline: "0 0 0 3px rgb(76 175 80 / 64%)",
     },
     lineHeights: {
-        none:"0rem",
+        none: "0rem",
         base: "",
         normal: "",
         short: "2.465rem",
         shorter: "",
         tall: "",
-        taller:"",
+        taller: "",
     },
     icons: {
         ...chakraTheme.icons,
+        ...customIcons
     },
 };
 

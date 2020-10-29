@@ -5,6 +5,8 @@ import {
     Box,
     Stack,
     Text,
+    Button,
+    Icon,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
@@ -75,6 +77,7 @@ const Container: React.FC<Props> = ({ children }) => {
                                 p={3}
                                 pl={6}
                                 opacity={0.5}
+                                
                             >
                                 {upperFirst(router.pathname.replace("/", ""))}
                             </Text>
@@ -83,6 +86,9 @@ const Container: React.FC<Props> = ({ children }) => {
                     <Box>
                         {router.pathname !== "/about" ? (
                             <NextLink href="/about" passHref>
+                                {/* <Button variant="outline" _hover={{color:"rgba(25, 166, 67, 1)"}}>
+                                    <Icon name="news"/>
+                                </Button> */}
                                 <IconButton
                                     aria-label="About me"
                                     variant="outline"
