@@ -4,13 +4,15 @@ import {
     IconButton,
     Box,
     Stack,
+    Text,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import Footer from "./TheFooter";
-import { navBgColor, bg, pText } from "../../styles/colors";
+import { navBgColor, bg, pText, secondaryTextColor } from "../../styles/colors";
 import NextImage from "next/image";
+import { upperFirst } from "lodash";
 
 interface Props {
     children: React.ReactNode;
@@ -50,9 +52,9 @@ const Container: React.FC<Props> = ({ children }) => {
                     maxWidth="900px"
                     width="100%"
                 >
-                    <Box>
+                    <Box display="flex" flexDirection="row">
                         <NextLink href="/">
-                            <div>
+                            <Box>
                                 <NextImage
                                     src="/images/Recompiled.png"
                                     width={35}
@@ -62,8 +64,21 @@ const Container: React.FC<Props> = ({ children }) => {
                                     loading="lazy"
                                     className="logo-img"
                                 />
-                            </div>
+                            </Box>
                         </NextLink>
+
+                        <Box>
+                            <Text
+                                pos="fixed"
+                                as="span"
+                                color={secondaryTextColor[colorMode]}
+                                p={3}
+                                pl={6}
+                                opacity={0.5}
+                            >
+                                {upperFirst(router.pathname.replace("/", ""))}
+                            </Text>
+                        </Box>
                     </Box>
                     <Box>
                         {router.pathname !== "/about" ? (
