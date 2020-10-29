@@ -5,8 +5,6 @@ import {
     Box,
     Stack,
     Text,
-    Button,
-    Icon,
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
