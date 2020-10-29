@@ -7,49 +7,13 @@ import {
     Link,
     PseudoBox,
     Text,
-    Divider,
     useColorMode,
 } from "@chakra-ui/core";
 import NextLink from "next/link";
+import Hr from './MDXhr';
+import { Table, THead, TData } from "./MDXTable";
 
-const Table = (props: any) => (
-    <Box overflowX="scroll" w="full">
-        <Box as="table" textAlign="left" mt="32px" w="full" {...props} />
-    </Box>
-);
 
-const THead = (props: any) => {
-    const { colorMode } = useColorMode();
-    const bg = {
-        light: "gray.50",
-        dark: "whiteAlpha.100",
-    };
-
-    return (
-        <Box
-            as="th"
-            bg={bg[colorMode]}
-            fontWeight="semibold"
-            p={2}
-            fontSize="sm"
-            {...props}
-        />
-    );
-};
-
-const TData = (props: any) => {
-    return (
-        <Box
-            as="td"
-            p={2}
-            borderTopWidth="1px"
-            borderColor="inherit"
-            fontSize="sm"
-            whiteSpace="normal"
-            {...props}
-        />
-    );
-};
 
 const CustomLink = (props: any) => {
     const { colorMode } = useColorMode();
@@ -145,15 +109,7 @@ const DocsHeading = (props: any) => {
     );
 };
 
-const Hr = () => {
-    const { colorMode } = useColorMode();
-    const borderColor = {
-        light: "gray.200",
-        dark: "gray.600",
-    };
 
-    return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
-};
 
 const MDXComponents = {
     h1: (props: any) => <Heading as="h1" size="xl" my={4} {...props} />,
