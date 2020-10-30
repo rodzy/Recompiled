@@ -13,12 +13,14 @@ import NextLink from "next/link";
 import styled from "@emotion/styled";
 
 const LearnLink = styled(Link)`
-    text-decoration:underline;
+    text-decoration: underline;
     &:hover {
         color: rgba(25, 166, 67, 1);
-        text-decoration:none;
+        text-decoration: none;
     }
 `;
+
+
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
@@ -55,7 +57,7 @@ const Index: NextPage = () => {
                         as="h2"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
-                        pb={[3,6]}
+                        pb={[3, 6]}
                         pr={[0, "6rem"]}
                         lineHeight={["normal", "short"]}
                     >
@@ -71,6 +73,14 @@ const Index: NextPage = () => {
                             </LearnLink>
                         </NextLink>
                     </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    maxWidth="800px"
+                >
                     <Text color={secondaryTextColor[colorMode]}>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Obcaecati placeat, eius magni praesentium
@@ -112,7 +122,7 @@ const Index: NextPage = () => {
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="700px"
+                    maxWidth="800px"
                     mt={8}
                 >
                     <Heading
@@ -123,6 +133,41 @@ const Index: NextPage = () => {
                     >
                         Latest posts
                     </Heading>
+                    <Text color={secondaryTextColor[colorMode]}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati placeat, eius magni praesentium
+                        dignissimos magnam eos pariatur molestias voluptas
+                        suscipit iure ex reprehenderit, a consectetur nostrum
+                        nihil accusantium aperiam numquam.
+                    </Text>
+                    <Text color={secondaryTextColor[colorMode]}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati placeat, eius magni praesentium
+                        dignissimos magnam eos pariatur molestias voluptas
+                        suscipit iure ex reprehenderit, a consectetur nostrum
+                        nihil accusantium aperiam numquam.
+                    </Text>
+                    <Text color={secondaryTextColor[colorMode]}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati placeat, eius magni praesentium
+                        dignissimos magnam eos pariatur molestias voluptas
+                        suscipit iure ex reprehenderit, a consectetur nostrum
+                        nihil accusantium aperiam numquam.
+                    </Text>
+                    <Text color={secondaryTextColor[colorMode]}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati placeat, eius magni praesentium
+                        dignissimos magnam eos pariatur molestias voluptas
+                        suscipit iure ex reprehenderit, a consectetur nostrum
+                        nihil accusantium aperiam numquam.
+                    </Text>
+                    <Text color={secondaryTextColor[colorMode]}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Obcaecati placeat, eius magni praesentium
+                        dignissimos magnam eos pariatur molestias voluptas
+                        suscipit iure ex reprehenderit, a consectetur nostrum
+                        nihil accusantium aperiam numquam.
+                    </Text>
                 </Flex>
             </Stack>
         </>

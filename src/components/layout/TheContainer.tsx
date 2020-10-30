@@ -4,7 +4,7 @@ import {
     IconButton,
     Box,
     Stack,
-    Text,
+    Text
 } from "@chakra-ui/core";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
@@ -27,8 +27,8 @@ const StickyNav = styled(Flex)`
 `;
 
 const Container: React.FC<Props> = ({ children }) => {
-    const { colorMode, toggleColorMode } = useColorMode();
     const router = useRouter();
+    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <>
@@ -75,7 +75,6 @@ const Container: React.FC<Props> = ({ children }) => {
                                 p={3}
                                 pl={6}
                                 opacity={0.5}
-                                
                             >
                                 {upperFirst(router.pathname.replace("/", ""))}
                             </Text>
@@ -83,17 +82,13 @@ const Container: React.FC<Props> = ({ children }) => {
                     </Box>
                     <Box>
                         {router.pathname !== "/about" ? (
-                            <NextLink href="/about" passHref>
-                                {/* <Button variant="outline" _hover={{color:"rgba(25, 166, 67, 1)"}}>
-                                    <Icon name="news"/>
-                                </Button> */}
-                                <IconButton
-                                    aria-label="About me"
-                                    variant="outline"
-                                    icon="attachment"
-                                    ml={3}
-                                />
-                            </NextLink>
+                            // <NextLink href="/about" passHref>
+                            //     </NextLink>
+                            <IconButton
+                                aria-label="Menu tab"
+                                variant="outline"
+                                icon="settings"
+                            />
                         ) : (
                             <NextLink href="/" passHref>
                                 <IconButton
