@@ -1,3 +1,5 @@
+// import fs from "fs";
+// import path from "path";
 import {
     Heading,
     Stack,
@@ -13,6 +15,10 @@ import { secondaryTextColor } from "../styles/colors";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 
+interface Props {
+    fileName: string;
+}
+
 const LearnLink = styled(Link)`
     text-decoration: underline;
     &:hover {
@@ -21,8 +27,12 @@ const LearnLink = styled(Link)`
     }
 `;
 
-const Index: NextPage = () => {
+const Index: NextPage<Props> = ({ fileName }) => {
     const { colorMode } = useColorMode();
+    // const MDXContent = dynamic(() => import(`../pages/posts/${fileName}`));
+    // const MDXMetaData = dynamic(() =>
+    //     import(`../pages/posts/${fileName}`).then((mod) => mod.meta)
+    // );
 
     return (
         <>
@@ -139,45 +149,34 @@ const Index: NextPage = () => {
                     >
                         Latest posts
                     </Heading>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
                 </Flex>
             </Stack>
         </>
     );
 };
+
+// export async function getStaticProps({ params }: any) {
+//     const postsDirectory = path.join(process.cwd(), "posts");
+//     const mdxFiles = fs.readdirSync(postsDirectory);
+//     const paths = mdxFiles.map((filename) => ({
+//         slug: filename.replace(".mdx", ""),
+//     }));
+
+//     // const postsWithFrontmatter = mdxFiles.map((filename) => {
+//     //     const postContent = fs
+//     //         .readFileSync(path.join("posts", params.slug + ".mdx"))
+//     //         .toString();
+
+//     //     return {
+//     //         slug: filename.replace(".mdx", ""),
+//     //     };
+//     // });
+
+//     return {
+//         props: {
+//             posts: paths,
+//         },
+//     };
+// }
 
 export default Index;
