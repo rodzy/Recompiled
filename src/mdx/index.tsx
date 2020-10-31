@@ -1,10 +1,14 @@
 import { Stack } from "@chakra-ui/core";
-
 interface Props {
     children: React.ReactNode;
+    frontMatter: FrontMatter;
 }
 
-const Wrapper: React.FC<Props> = ({ children }) => {
+const PostWrapper: React.FC<Props> = ({ children, frontMatter }) => {
+    const slug = frontMatter.__resourcePath
+        .replace("posts/", "")
+        .replace(".mdx", "");
+    console.log(slug);
     return (
         <Stack
             spacing={8}
@@ -18,4 +22,4 @@ const Wrapper: React.FC<Props> = ({ children }) => {
     );
 };
 
-export default Wrapper;
+export default PostWrapper;

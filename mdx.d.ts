@@ -1,5 +1,9 @@
 interface FrontMatter {
     __resourcePath: string;
+    pageTitle: string;
+    pageDescription: string;
+    postDate?: string;
+    backdropUrl?: string;
 }
 
 declare module "*.mdx" {

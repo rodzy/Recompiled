@@ -13,6 +13,8 @@ import { NextPage } from "next";
 import { secondaryTextColor } from "../styles/colors";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
+import ListItem from "../components/ListItem";
+import { frontMatter as blogPosts } from "../pages/posts/**/*.mdx";
 
 interface Props {
     fileName: string;
@@ -28,11 +30,8 @@ const LearnLink = styled(Link)`
 
 const Index: NextPage<Props> = () => {
     const { colorMode } = useColorMode();
-    // const MDXContent = dynamic(() => import(`../pages/posts/${fileName}`));
-    // const MDXMetaData = dynamic(() =>
-    //     import(`../pages/posts/${fileName}`).then((mod) => mod.meta)
-    // );
 
+    console.log(blogPosts);
     return (
         <>
             <Stack
@@ -145,6 +144,14 @@ const Index: NextPage<Props> = () => {
                     >
                         Latest posts
                     </Heading>
+                    <Flex>
+                        {blogPosts.map((item) => (
+                            <ListItem
+                                key={item.pageTitle}
+                                frontMatter={item}
+                            />
+                        ))}
+                    </Flex>
                 </Flex>
             </Stack>
         </>
