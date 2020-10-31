@@ -1,5 +1,5 @@
 const withMDXEnhanced = require("next-mdx-enhanced")({
-    layoutPath: "src/components/layout",
+    layoutPath: "src/mdx",
     defaultLayout: true,
     fileExtensions: ["mdx"],
     usesSrc: true,
