@@ -6,6 +6,8 @@ import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "../components/mdx/MDXComponents";
 import Container from "../components/layout/TheContainer";
 import GlobalStyle from "../components/GlobalStyle";
+import { DefaultSeo } from 'next-seo'
+import SEO from '../../next-seo.config.js'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -14,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <ColorModeProvider value="dark">
                     <GlobalStyle>
                         <Container>
+                            <DefaultSeo {...SEO}/>
                             <Component {...pageProps} />
                         </Container>
                     </GlobalStyle>

@@ -36,9 +36,6 @@ const Index: NextPage<Props> = ({ fileName }) => {
 
     return (
         <>
-            <Head>
-                <title>Recompiled — Isaac Rodríguez Digital Garden</title>
-            </Head>
             <Stack
                 as="main"
                 spacing={8}
