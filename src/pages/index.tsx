@@ -10,7 +10,6 @@ import {
     Skeleton,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
-import Head from "next/head";
 import { secondaryTextColor } from "../styles/colors";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
@@ -27,7 +26,7 @@ const LearnLink = styled(Link)`
     }
 `;
 
-const Index: NextPage<Props> = ({ fileName }) => {
+const Index: NextPage<Props> = () => {
     const { colorMode } = useColorMode();
     // const MDXContent = dynamic(() => import(`../pages/posts/${fileName}`));
     // const MDXMetaData = dynamic(() =>
