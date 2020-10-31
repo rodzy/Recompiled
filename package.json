@@ -21,6 +21,7 @@
         "@mdx-js/loader": "^1.6.19",
         "@next/mdx": "^10.0.0",
         "body-scroll-lock": "^3.1.5",
+        "date-fns": "^2.16.1",
         "emotion-theming": "^10.0.27",
         "lodash": "^4.17.20",
         "next": "^10.0.0",
