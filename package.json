@@ -20,6 +20,7 @@
         "@emotion/styled": "^10.0.27",
         "@mdx-js/loader": "^1.6.19",
         "@next/mdx": "^10.0.0",
+        "babel-plugin-import-glob-array": "^0.2.0",
         "body-scroll-lock": "^3.1.5",
         "date-fns": "^2.16.1",
         "emotion-theming": "^10.0.27",
@@ -49,8 +50,14 @@
         "typescript": "^4.0.3"
     },
     "next-unused": {
+        "alias": {
+            "@components": "components/",
+            "@lib": "lib/",
+            "@styles": "styles/"
+        },
         "include": [
-            "components/*"
+            "components",
+            "lib"
         ]
     }
 }
