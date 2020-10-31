@@ -14,11 +14,8 @@ import { secondaryTextColor } from "../styles/colors";
 import NextLink from "next/link";
 import styled from "@emotion/styled";
 import ListItem from "../components/ListItem";
-import { frontMatter as blogPosts } from "../pages/posts/**/*.mdx";
+import { frontMatter as blogPosts } from "../pages/posts/*.mdx";
 
-interface Props {
-    fileName: string;
-}
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -28,10 +25,9 @@ const LearnLink = styled(Link)`
     }
 `;
 
-const Index: NextPage<Props> = () => {
+const Index: NextPage = () => {
     const { colorMode } = useColorMode();
 
-    console.log(blogPosts);
     return (
         <>
             <Stack
@@ -157,29 +153,5 @@ const Index: NextPage<Props> = () => {
         </>
     );
 };
-
-// export async function getStaticProps({ params }: any) {
-//     const postsDirectory = path.join(process.cwd(), "posts");
-//     const mdxFiles = fs.readdirSync(postsDirectory);
-//     const paths = mdxFiles.map((filename) => ({
-//         slug: filename.replace(".mdx", ""),
-//     }));
-
-//     // const postsWithFrontmatter = mdxFiles.map((filename) => {
-//     //     const postContent = fs
-//     //         .readFileSync(path.join("posts", params.slug + ".mdx"))
-//     //         .toString();
-
-//     //     return {
-//     //         slug: filename.replace(".mdx", ""),
-//     //     };
-//     // });
-
-//     return {
-//         props: {
-//             posts: paths,
-//         },
-//     };
-// }
 
 export default Index;
