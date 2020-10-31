@@ -5,6 +5,7 @@ import {
     Flex,
     useColorMode,
     Link,
+    Skeleton,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -19,8 +20,6 @@ const LearnLink = styled(Link)`
         text-decoration: none;
     }
 `;
-
-
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
@@ -43,7 +42,7 @@ const Index: NextPage = () => {
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="800px"
+                    maxWidth="850px"
                 >
                     <Heading
                         letterSpacing="tight"
@@ -80,42 +79,50 @@ const Index: NextPage = () => {
                     justifyContent="flex-start"
                     alignItems="flex-start"
                     maxWidth="800px"
+                    mb={8}
                 >
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
-                    <Text color={secondaryTextColor[colorMode]}>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Obcaecati placeat, eius magni praesentium
-                        dignissimos magnam eos pariatur molestias voluptas
-                        suscipit iure ex reprehenderit, a consectetur nostrum
-                        nihil accusantium aperiam numquam.
-                    </Text>
+                    <Stack
+                        flexDirection={["column", "row"]}
+                        flexWrap="nowrap"
+                        width="100%"
+                        justifyContent="space-around"
+                    >
+                        <Flex flexDirection="column" pl={[0, 3]}>
+                            <Heading as="h2">Notes</Heading>
+                            <Text
+                                as="p"
+                                color={secondaryTextColor[colorMode]}
+                                width={["100%", "25rem"]}
+                                pr={[0, 5]}
+                            >
+                                A collection of short keynotes, blockquotes and
+                                snippets for any intresting topic or subject
+                                related with web development.
+                            </Text>
+                            <Flex flexDirection="column">
+                                <Skeleton height="80px" my="10px"></Skeleton>
+                            </Flex>
+                        </Flex>
+                        <Flex flexDirection="column" pl={[0, 3]}>
+                            <Heading as="h2">Ideas</Heading>
+                            <Text
+                                as="p"
+                                color={secondaryTextColor[colorMode]}
+                                width={["100%", "25rem"]}
+                                pr={[0, 5]}
+                            >
+                                A section to help explain my general ideas and
+                                thoughts about any project or future goals.
+                            </Text>
+                            <Flex flexDirection="column">
+                                <Skeleton
+                                    height="80px"
+                                    mt={["10px", "33.5px"]}
+                                    mb="10px"
+                                ></Skeleton>
+                            </Flex>
+                        </Flex>
+                    </Stack>
                 </Flex>
                 <Flex
                     as="section"
@@ -123,7 +130,6 @@ const Index: NextPage = () => {
                     justifyContent="flex-start"
                     alignItems="flex-start"
                     maxWidth="800px"
-                    mt={8}
                 >
                     <Heading
                         letterSpacing="tight"
