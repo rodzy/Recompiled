@@ -42,12 +42,9 @@ const NotFound: NextPage = () => {
                         </Text>
                     </Box>
                     <Box>
-                        <Text as="p" fontStyle="italic">
+                        <Text as="p" fontStyle="italic" color={secondaryTextColor[colorMode]}>
                             "But you can always go back in time, like nothing
                             happened. Stay safe out there"
-                        </Text>
-                        <Text as="p" color={secondaryTextColor[colorMode]}>
-                            - Isaac Rodríguez
                         </Text>
                     </Box>
                     <Flex

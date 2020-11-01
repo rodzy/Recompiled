@@ -25,8 +25,7 @@ const LearnLink = styled(Link)`
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
-
-    console.log(blogPosts);
+    
     return (
         <>
             <Stack
