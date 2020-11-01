@@ -25,9 +25,9 @@ const theme: DefaultTheme = {
         lg: "1.125rem",
         xl: "1.25rem",
         "2xl": "1.5rem",
-        "3xl": "1.80rem",
-        "4xl": "2.25rem",
-        "5xl": "3rem",
+        "3xl": "2rem",
+        "4xl": "3rem",
+        "5xl": "5rem",
         "6xl": "6rem",
     },
     shadows: {

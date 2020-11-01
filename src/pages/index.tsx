@@ -25,7 +25,7 @@ const LearnLink = styled(Link)`
 
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
-    
+
     return (
         <>
             <Stack
@@ -47,7 +47,7 @@ const Index: NextPage = () => {
                         letterSpacing="tight"
                         mb={2}
                         as="h1"
-                        fontSize={["5xl", "6xl"]}
+                        fontSize={["4xl", "5xl", "6xl"]}
                     >
                         Recompiled
                     </Heading>
@@ -57,7 +57,7 @@ const Index: NextPage = () => {
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
                         pr={[0, "6rem"]}
-                        lineHeight={["normal", "short"]}
+                        lineHeight={["normal", "tall"]}
                     >
                         A digital space for blog posts, notes and ideas about
                         programming and the modern web from Isaac Rodríguez
@@ -71,62 +71,6 @@ const Index: NextPage = () => {
                             </LearnLink>
                         </NextLink>
                     </Heading>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    maxWidth="800px"
-                    mb={8}
-                >
-                    <Stack
-                        flexDirection={["column", "row"]}
-                        flexWrap="nowrap"
-                        width="100%"
-                        justifyContent="space-around"
-                    >
-                        <Flex flexDirection="column" pl={[0, 3]}>
-                            <Heading as="h2" mb={2}>
-                                Notes
-                            </Heading>
-                            <Text
-                                as="p"
-                                color={secondaryTextColor[colorMode]}
-                                width={["100%", "25rem"]}
-                                pr={[0, 5]}
-                            >
-                                A collection of short keynotes, blockquotes and
-                                snippets for any intresting topic or subject
-                                related with web development.
-                            </Text>
-                            <Flex flexDirection="column" py={5}>
-                                {notesPosts.map((note, index) => (
-                                    <ListItem key={index} frontMatter={note} />
-                                ))}
-                            </Flex>
-                        </Flex>
-                        <Flex flexDirection="column" pl={[0, 3]}>
-                            <Heading as="h2" mb={2}>
-                                Ideas
-                            </Heading>
-                            <Text
-                                as="p"
-                                color={secondaryTextColor[colorMode]}
-                                width={["100%", "25rem"]}
-                                pr={[0, 5]}
-                            >
-                                Plain explainations of my general ideas and
-                                thoughts about any projects, future goals and
-                                Open Source software.
-                            </Text>
-                            <Flex flexDirection="column" py={5}>
-                                {ideasPosts.map((idea, index) => (
-                                    <ListItem key={index} frontMatter={idea} />
-                                ))}
-                            </Flex>
-                        </Flex>
-                    </Stack>
                 </Flex>
                 <Flex
                     as="section"
@@ -162,6 +106,62 @@ const Index: NextPage = () => {
                             ))}
                         </Flex>
                     </Flex>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    maxWidth="800px"
+                    mb={8}
+                >
+                    <Stack
+                        flexDirection={["column", "column", "column", "row"]}
+                        flexWrap="nowrap"
+                        width="100%"
+                        justifyContent="space-around"
+                    >
+                        <Flex flexDirection="column" pl={[0, 0, 3]}>
+                            <Heading as="h2" mb={2}>
+                                Notes
+                            </Heading>
+                            <Text
+                                as="p"
+                                color={secondaryTextColor[colorMode]}
+                                width={["100%", "100%", "100%", "25rem"]}
+                                pr={[0, 5]}
+                            >
+                                A collection of short keynotes, blockquotes and
+                                snippets for any intresting topic or subject
+                                related with web development.
+                            </Text>
+                            <Flex flexDirection="column" py={5}>
+                                {notesPosts.map((note, index) => (
+                                    <ListItem key={index} frontMatter={note} />
+                                ))}
+                            </Flex>
+                        </Flex>
+                        <Flex flexDirection="column" pl={[0, 0, 3]}>
+                            <Heading as="h2" mb={2}>
+                                Ideas
+                            </Heading>
+                            <Text
+                                as="p"
+                                color={secondaryTextColor[colorMode]}
+                                width={["100%", "25rem"]}
+                                pr={[0, 5]}
+                            >
+                                Plain explainations of my general ideas and
+                                thoughts about any projects, future goals and
+                                Open Source software.
+                            </Text>
+                            <Flex flexDirection="column" py={5}>
+                                {ideasPosts.map((idea, index) => (
+                                    <ListItem key={index} frontMatter={idea} />
+                                ))}
+                            </Flex>
+                        </Flex>
+                    </Stack>
                 </Flex>
             </Stack>
         </>
