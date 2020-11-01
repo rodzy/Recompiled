@@ -5,6 +5,7 @@ import {
     Flex,
     useColorMode,
     Link,
+    Button,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
 import { secondaryTextColor } from "../styles/colors";
@@ -14,6 +15,7 @@ import ListItem from "../components/ListItem";
 import { frontMatter as blogPosts } from "../pages/posts/*.mdx";
 import { frontMatter as notesPosts } from "../pages/notes/*.mdx";
 import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
+import MiniItem from "../components/MiniItem";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -97,7 +99,7 @@ const Index: NextPage = () => {
                         <Heading as="h3" size="lg" my={2}>
                             The latest posts
                         </Heading>
-                        <Flex my={5} flexDirection="column">
+                        <Flex mt={4} flexDirection="column">
                             {blogPosts.map((item) => (
                                 <ListItem
                                     key={item.pageTitle}
@@ -105,6 +107,17 @@ const Index: NextPage = () => {
                                 />
                             ))}
                         </Flex>
+                    </Flex>
+                    <Flex justifyContent="center" width="100%">
+                        <NextLink href="/" passHref>
+                            <Button
+                                leftIcon="external-link"
+                                variant="outline"
+                                boxShadow="md"
+                            >
+                                Visit the blog
+                            </Button>
+                        </NextLink>
                     </Flex>
                 </Flex>
                 <Flex
@@ -136,9 +149,23 @@ const Index: NextPage = () => {
                                 related with web development.
                             </Text>
                             <Flex flexDirection="column" py={5}>
-                                {notesPosts.map((note, index) => (
-                                    <ListItem key={index} frontMatter={note} />
+                                {notesPosts.map((note) => (
+                                    <MiniItem
+                                        key={note.pageTitle}
+                                        frontMatter={note}
+                                    />
                                 ))}
+                                <Flex justifyContent="flex-end">
+                                    <NextLink href="/" passHref>
+                                        <Button
+                                            rightIcon="arrow-forward"
+                                            variant="outline"
+                                            boxShadow="md"
+                                        >
+                                            Read more notes
+                                        </Button>
+                                    </NextLink>
+                                </Flex>
                             </Flex>
                         </Flex>
                         <Flex flexDirection="column" pl={[0, 0, 3]}>
@@ -156,9 +183,23 @@ const Index: NextPage = () => {
                                 Open Source software.
                             </Text>
                             <Flex flexDirection="column" py={5}>
-                                {ideasPosts.map((idea, index) => (
-                                    <ListItem key={index} frontMatter={idea} />
+                                {ideasPosts.map((idea) => (
+                                    <MiniItem
+                                        key={idea.pageTitle}
+                                        frontMatter={idea}
+                                    />
                                 ))}
+                                <Flex justifyContent="flex-end">
+                                    <NextLink href="/" passHref>
+                                        <Button
+                                            rightIcon="arrow-forward"
+                                            variant="outline"
+                                            boxShadow="md"
+                                        >
+                                            Read more ideas
+                                        </Button>
+                                    </NextLink>
+                                </Flex>
                             </Flex>
                         </Flex>
                     </Stack>
