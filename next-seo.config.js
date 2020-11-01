@@ -1,4 +1,4 @@
-const title = "Recompiled — Isaac Rodríguez Digital Garden";
+const title = "Recompiled — Digital Garden by Isaac Rodríguez";
 const description =
     "A digital space for blog posts, notes and ideas about programming and the modern web from Isaac Rodríguez perspective.";
 

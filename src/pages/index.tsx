@@ -58,7 +58,7 @@ const Index: NextPage = () => {
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
-                        pr={[0, "6rem"]}
+                        pr={[0, 0, "10rem"]}
                         lineHeight={["normal", "tall"]}
                     >
                         A digital space for blog posts, notes and ideas about
@@ -79,7 +79,7 @@ const Index: NextPage = () => {
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="800px"
+                    width="100%"
                 >
                     <Heading
                         as="h2"
@@ -125,7 +125,7 @@ const Index: NextPage = () => {
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="800px"
+                    width="100%"
                     mb={8}
                 >
                     <Stack
@@ -203,6 +203,84 @@ const Index: NextPage = () => {
                             </Flex>
                         </Flex>
                     </Stack>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-end"
+                    alignItems="flex-end"
+                    width="100%"
+                    mb={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Focus
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pl={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                        textAlign="right"
+                    >
+                        Recompiled is a digital garden focused on explaining
+                        programming through great typography, minimalism and
+                        digital art.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    mb={8}
+                >
+                    <Text as="span">Content soon</Text>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                    mb={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Art
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pr={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                    >
+                        Sometimes posts are less boring when the concepts are
+                        explained in conjunction with visual representations.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    mb={8}
+                >
+                    <Text as="span">Content soon</Text>
                 </Flex>
             </Stack>
         </>
