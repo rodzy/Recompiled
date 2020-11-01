@@ -1,4 +1,4 @@
-import { Color } from "../types/colors.type";
+import { Color } from "../types/colors";
 
 export const secondaryTextColor: Color = {
     light: "#4f5d75",
