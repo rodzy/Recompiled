@@ -12,7 +12,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "find:unused": "next-unused"
+        "find:unused": "next-unused",
+        "lint":"eslint . --ext .tsx",
+        "lint:fix":"eslint . --fix --ext .tsx"
     },
     "dependencies": {
         "@chakra-ui/core": "^0.8.0",

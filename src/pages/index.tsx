@@ -1,5 +1,3 @@
-// import fs from "fs";
-// import path from "path";
 import {
     Heading,
     Stack,
@@ -28,6 +26,7 @@ const LearnLink = styled(Link)`
 const Index: NextPage = () => {
     const { colorMode } = useColorMode();
 
+    console.log(blogPosts);
     return (
         <>
             <Stack
@@ -118,8 +117,9 @@ const Index: NextPage = () => {
                                 width={["100%", "25rem"]}
                                 pr={[0, 5]}
                             >
-                                A section to help explain my general ideas and
-                                thoughts about any project or future goals.
+                                Plain explainations of my general ideas and
+                                thoughts about any projects, future goals and
+                                Open Source software.
                             </Text>
                             <Flex flexDirection="column" py={5}>
                                 {ideasPosts.map((idea, index) => (
@@ -154,7 +154,7 @@ const Index: NextPage = () => {
                         <Heading as="h3" size="lg" my={2}>
                             The latest posts
                         </Heading>
-                        <Flex my={5}>
+                        <Flex my={5} flexDirection="column">
                             {blogPosts.map((item) => (
                                 <ListItem
                                     key={item.pageTitle}

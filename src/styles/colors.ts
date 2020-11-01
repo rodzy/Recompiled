@@ -24,3 +24,8 @@ export const navBgColor: Color = {
     light: "rgba(255, 255, 255, 0.8)",
     dark: "rgba(19,20,21,0.45)",
 };
+
+export const borderColors: Color = {
+    light: "#E2E8F0",
+    dark:"rgba(255,255,255,0.16)"
+}

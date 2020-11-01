@@ -32,7 +32,7 @@ const theme: DefaultTheme = {
     },
     shadows: {
         sm: "",
-        md: "",
+        md: "rgba(52, 61, 68, 0.1) 0px 1px 2px",
         lg: "",
         xl: "",
         "2xl": "",
