@@ -4,6 +4,7 @@ interface FrontMatter {
     pageDescription: string;
     postDate?: string;
     backdropUrl?: string;
+    eta?: string;
 }
 
 declare module "*.mdx" {

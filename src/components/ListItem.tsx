@@ -1,4 +1,12 @@
-import { Box, Link, Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
+import {
+    Box,
+    Link,
+    Flex,
+    Heading,
+    Text,
+    useColorMode,
+    Icon,
+} from "@chakra-ui/core";
 import NextLink from "next/link";
 import { secondaryTextColor, borderColors } from "../styles/colors";
 import Date from "./Date";
@@ -19,7 +27,7 @@ const ListItem: React.FC<Props> = ({ frontMatter }) => {
     const { colorMode } = useColorMode();
     const slug = frontMatter.__resourcePath.replace(".mdx", "");
     return (
-        <NextLink href={`${slug}`} passHref>
+        <NextLink href={slug} passHref>
             <Link
                 _hover={{
                     textDecoration: "none",
@@ -43,21 +51,36 @@ const ListItem: React.FC<Props> = ({ frontMatter }) => {
                         width="100%"
                         align="flex-start"
                         justifyContent="space-between"
-                        flexDirection={["column", "row"]}
+                        flexDirection={["column", "column", "column", "row"]}
                     >
                         <Heading size="md" as="h3" mb={2} fontWeight="medium">
                             {frontMatter.pageTitle}
                         </Heading>
-                        <Text
-                            color="gray.500"
-                            minWidth="105px"
-                            textAlign={["left", "right"]}
-                            mb={[4, 0]}
-                        >
-                            <Date dateString={frontMatter.postDate} />
-                        </Text>
+                        <Flex flexDirection="column">
+                            <Text
+                                color={secondaryTextColor[colorMode]}
+                                minWidth="105px"
+                                textAlign={["left", "right"]}
+                                mb={[0, 0]}
+                            >
+                                <Icon name="calendar" mb={1} mr={2} />
+                                <Date dateString={frontMatter.postDate} />
+                            </Text>
+                            <Text
+                                color={secondaryTextColor[colorMode]}
+                                minWidth="105px"
+                                textAlign={["left", "right"]}
+                                mb={[3, 3, 3, 0]}
+                            >
+                                <Icon name="time" mb={1} mr={2} />
+                                {frontMatter.eta} read
+                            </Text>
+                        </Flex>
                     </Flex>
-                    <Text color={secondaryTextColor[colorMode]}>
+                    <Text
+                        color={secondaryTextColor[colorMode]}
+                        pr={[0, "10rem"]}
+                    >
                         {frontMatter.pageDescription}
                     </Text>
                 </CustomBox>

@@ -134,7 +134,7 @@ const Index: NextPage = () => {
                         width="100%"
                         justifyContent="space-around"
                     >
-                        <Flex flexDirection="column" pl={[0, 0, 3]}>
+                        <Flex flexDirection="column">
                             <Heading as="h2" mb={2}>
                                 Notes
                             </Heading>
