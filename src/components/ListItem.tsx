@@ -7,7 +7,7 @@ interface Props {
 
 const ListItem: React.FC<Props> = ({ frontMatter }) => {
     const slug = frontMatter.__resourcePath
-        .replace("post/", "")
+        .replace("notes/", "")
         .replace(".mdx", "");
     return (
         <NextLink href={`${slug}`} passHref>

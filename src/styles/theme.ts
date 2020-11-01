@@ -28,7 +28,7 @@ const theme: DefaultTheme = {
         "3xl": "1.80rem",
         "4xl": "2.25rem",
         "5xl": "3rem",
-        "6xl": "4rem",
+        "6xl": "6rem",
     },
     shadows: {
         sm: "",

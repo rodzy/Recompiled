@@ -7,7 +7,6 @@ import {
     Flex,
     useColorMode,
     Link,
-    Skeleton,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
 import { secondaryTextColor } from "../styles/colors";
@@ -15,7 +14,8 @@ import NextLink from "next/link";
 import styled from "@emotion/styled";
 import ListItem from "../components/ListItem";
 import { frontMatter as blogPosts } from "../pages/posts/*.mdx";
-
+import { frontMatter as notesPosts } from "../pages/notes/*.mdx";
+import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -89,7 +89,9 @@ const Index: NextPage = () => {
                         justifyContent="space-around"
                     >
                         <Flex flexDirection="column" pl={[0, 3]}>
-                            <Heading as="h2">Notes</Heading>
+                            <Heading as="h2" mb={2}>
+                                Notes
+                            </Heading>
                             <Text
                                 as="p"
                                 color={secondaryTextColor[colorMode]}
@@ -100,12 +102,16 @@ const Index: NextPage = () => {
                                 snippets for any intresting topic or subject
                                 related with web development.
                             </Text>
-                            <Flex flexDirection="column">
-                                <Skeleton height="80px" my="10px"></Skeleton>
+                            <Flex flexDirection="column" py={5}>
+                                {notesPosts.map((note, index) => (
+                                    <ListItem key={index} frontMatter={note} />
+                                ))}
                             </Flex>
                         </Flex>
                         <Flex flexDirection="column" pl={[0, 3]}>
-                            <Heading as="h2">Ideas</Heading>
+                            <Heading as="h2" mb={2}>
+                                Ideas
+                            </Heading>
                             <Text
                                 as="p"
                                 color={secondaryTextColor[colorMode]}
@@ -115,12 +121,10 @@ const Index: NextPage = () => {
                                 A section to help explain my general ideas and
                                 thoughts about any project or future goals.
                             </Text>
-                            <Flex flexDirection="column">
-                                <Skeleton
-                                    height="80px"
-                                    mt={["10px", "33.5px"]}
-                                    mb="10px"
-                                ></Skeleton>
+                            <Flex flexDirection="column" py={5}>
+                                {ideasPosts.map((idea, index) => (
+                                    <ListItem key={index} frontMatter={idea} />
+                                ))}
                             </Flex>
                         </Flex>
                     </Stack>
@@ -133,20 +137,31 @@ const Index: NextPage = () => {
                     maxWidth="800px"
                 >
                     <Heading
+                        as="h2"
                         letterSpacing="tight"
-                        mb={4}
+                        mb={2}
                         size="xl"
                         fontWeight={700}
                     >
-                        Latest posts
+                        Blog
                     </Heading>
-                    <Flex>
-                        {blogPosts.map((item) => (
-                            <ListItem
-                                key={item.pageTitle}
-                                frontMatter={item}
-                            />
-                        ))}
+                    <Text as="p" color={secondaryTextColor[colorMode]}>
+                        A list of curated posts about web development, best
+                        practices, and more detailed information about ongoing
+                        personal projects or OSS community tendencies.
+                    </Text>
+                    <Flex flexDirection="column">
+                        <Heading as="h3" size="lg" my={2}>
+                            The latest posts
+                        </Heading>
+                        <Flex my={5}>
+                            {blogPosts.map((item) => (
+                                <ListItem
+                                    key={item.pageTitle}
+                                    frontMatter={item}
+                                />
+                            ))}
+                        </Flex>
                     </Flex>
                 </Flex>
             </Stack>
