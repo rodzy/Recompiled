@@ -13,8 +13,8 @@
         "build": "next build",
         "start": "next start",
         "find:unused": "next-unused",
-        "lint":"eslint . --ext .tsx",
-        "lint:fix":"eslint . --fix --ext .tsx"
+        "lint": "eslint . --ext .tsx",
+        "lint:fix": "eslint . --fix --ext .tsx"
     },
     "dependencies": {
         "@chakra-ui/core": "^0.8.0",
@@ -33,6 +33,7 @@
         "next-seo": "^4.14.0",
         "react": "17.0.1",
         "react-dom": "17.0.1",
+        "react-transition-group": "^4.4.1",
         "remark-autolink-headings": "^6.0.1",
         "remark-code-titles": "^0.1.1",
         "remark-slug": "^6.0.0"
@@ -43,6 +44,7 @@
         "@types/mdx-js__react": "^1.5.3",
         "@types/node": "^14.14.2",
         "@types/react": "^16.9.53",
+        "@types/react-transition-group": "^4.4.0",
         "@typescript-eslint/eslint-plugin": "^4.5.0",
         "@typescript-eslint/parser": "^4.5.0",
         "eslint": "^7.11.0",

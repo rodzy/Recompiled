@@ -11,6 +11,11 @@ import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
+import { CSSTransition } from "react-transition-group";
+
+interface Scroll {
+    currentScrollHeight: number;
+}
 
 const StickyNav = styled(Flex)`
     position: sticky;
@@ -22,7 +27,7 @@ const StickyNav = styled(Flex)`
 
 const NavBar: React.FC = () => {
     const { colorMode, toggleColorMode } = useColorMode();
-    const [windowH, setWindowH] = useState({ currentScrollHeight: 0 });
+    const [windowH, setWindowH] = useState<Scroll>({ currentScrollHeight: 0 });
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -45,7 +50,7 @@ const NavBar: React.FC = () => {
             bg={navBgColor[colorMode]}
             as="nav"
             p={4}
-            mt={[3, 6]}
+            mt={[3, 10]}
             mb={8}
             mx="auto"
         >
@@ -60,15 +65,29 @@ const NavBar: React.FC = () => {
                     <Box>
                         <NextLink href="/">
                             <Box>
-                                <NextImage
-                                    src="/images/Recompiled.png"
-                                    width={35}
-                                    height={35}
-                                    alt="Recompiled - Logo"
-                                    role="image"
-                                    loading="lazy"
-                                    className="logo-img"
-                                />
+                                {windowH.currentScrollHeight === 0 ? (
+                                    <div>
+                                        <NextImage
+                                            src="/images/Recompiled-Dark.png"
+                                            width={35}
+                                            height={35}
+                                            alt="Recompiled - Logo"
+                                            role="image"
+                                            loading="eager"
+                                            className="logo-img"
+                                        />
+                                    </div>
+                                ) : (
+                                    <NextImage
+                                        src="/images/Recompiled.png"
+                                        width={35}
+                                        height={35}
+                                        alt="Recompiled - Logo"
+                                        role="image"
+                                        loading="eager"
+                                        className="logo-img"
+                                    />
+                                )}
                             </Box>
                         </NextLink>
                     </Box>
