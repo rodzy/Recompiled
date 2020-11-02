@@ -11,7 +11,6 @@ import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
-import { CSSTransition } from "react-transition-group";
 
 interface Scroll {
     currentScrollHeight: number;
@@ -28,6 +27,7 @@ const StickyNav = styled(Flex)`
 const NavBar: React.FC = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const [windowH, setWindowH] = useState<Scroll>({ currentScrollHeight: 0 });
+    const [open, setOpen] = useState<boolean>(false);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -92,52 +92,98 @@ const NavBar: React.FC = () => {
                         </NextLink>
                     </Box>
                 </Box>
-                <Box>
-                    <NextLink href="/about" passHref>
-                        <Button
-                            variant="link"
-                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
-                        >
-                            About
-                        </Button>
-                    </NextLink>
+                <Flex>
+                    <IconButton
+                        aria-label="Menu"
+                        display={["block", "block", "none", "none"]}
+                        icon={open ? "small-close" : "search"}
+                        variant="outline"
+                        onClick={() => {
+                            setOpen(!open);
+                        }}
+                    />
+                    <Box
+                        display={[
+                            open ? "block" : "none",
+                            open ? "block" : "none",
+                            "flex",
+                            "flex",
+                        ]}
+                        width={["full", "auto"]}
+                        alignItems="center"
+                        flexGrow={1}
+                    >
+                        <NextLink href="/about" passHref>
+                            <Button
+                                variant="link"
+                                display={[
+                                    "block",
+                                    windowH.currentScrollHeight === 0
+                                        ? "block"
+                                        : "none",
+                                ]}
+                            >
+                                About
+                            </Button>
+                        </NextLink>
 
-                    <NextLink href="/newsletter" passHref>
-                        <Button
-                            ml={4}
-                            variant="link"
-                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
-                        >
-                            Blog
-                        </Button>
-                    </NextLink>
-                    <NextLink href="/newsletter" passHref>
-                        <Button
-                            ml={4}
-                            variant="link"
-                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
-                        >
-                            Notes
-                        </Button>
-                    </NextLink>
-                    <NextLink href="/newsletter" passHref>
-                        <Button
-                            ml={4}
-                            variant="link"
-                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
-                        >
-                            Ideas
-                        </Button>
-                    </NextLink>
-                    <NextLink href="/newsletter" passHref>
-                        <Button
-                            ml={4}
-                            variant="link"
-                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
-                        >
-                            Newsletter
-                        </Button>
-                    </NextLink>
+                        <NextLink href="/newsletter" passHref>
+                            <Button
+                                ml={4}
+                                variant="link"
+                                display={[
+                                    "block",
+                                    windowH.currentScrollHeight === 0
+                                        ? "block"
+                                        : "none",
+                                ]}
+                            >
+                                Blog
+                            </Button>
+                        </NextLink>
+                        <NextLink href="/newsletter" passHref>
+                            <Button
+                                ml={4}
+                                variant="link"
+                                display={[
+                                    "block",
+                                    windowH.currentScrollHeight === 0
+                                        ? "block"
+                                        : "none",
+                                ]}
+                            >
+                                Notes
+                            </Button>
+                        </NextLink>
+                        <NextLink href="/newsletter" passHref>
+                            <Button
+                                ml={4}
+                                variant="link"
+                                display={[
+                                    "block",
+                                    windowH.currentScrollHeight === 0
+                                        ? "block"
+                                        : "none",
+                                ]}
+                            >
+                                Ideas
+                            </Button>
+                        </NextLink>
+                        <NextLink href="/newsletter" passHref>
+                            <Button
+                                ml={4}
+                                variant="link"
+                                display={[
+                                    "block",
+                                    windowH.currentScrollHeight === 0
+                                        ? "block"
+                                        : "none",
+                                ]}
+                            >
+                                Newsletter
+                            </Button>
+                        </NextLink>
+                    </Box>
                     <IconButton
                         aria-label="Toggle dark mode"
                         variant="outline"
@@ -145,7 +191,7 @@ const NavBar: React.FC = () => {
                         onClick={toggleColorMode}
                         ml={3}
                     />
-                </Box>
+                </Flex>
             </Stack>
         </StickyNav>
     );
