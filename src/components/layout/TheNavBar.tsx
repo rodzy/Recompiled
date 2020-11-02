@@ -220,7 +220,8 @@ const NavBar: React.FC = () => {
                             | React.RefObject<HTMLElement>
                             | undefined
                     }
-                    blockScrollOnMount={true}
+                    blockScrollOnMount={false}
+                    closeOnEsc
                 >
                     <DrawerOverlay />
                     <DrawerContent>
