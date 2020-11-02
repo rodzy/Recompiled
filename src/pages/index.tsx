@@ -16,6 +16,8 @@ import { frontMatter as blogPosts } from "../pages/posts/*.mdx";
 import { frontMatter as notesPosts } from "../pages/notes/*.mdx";
 import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
+import Pilars from "../components/Pilars";
+import { Box } from "@chakra-ui/core";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -240,9 +242,16 @@ const Index: NextPage = () => {
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
-                    mb={8}
+                    my={8}
                 >
-                    <Text as="span">Content soon</Text>
+                    <Pilars />
+                    <Box pt={3} textAlign="center">
+                        <NextLink href="/" passHref>
+                            <Link fontStyle="italic">
+                                Read: "Why fonts are the deciding factor?"
+                            </Link>
+                        </NextLink>
+                    </Box>
                 </Flex>
                 <Flex
                     as="section"
