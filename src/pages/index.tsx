@@ -6,6 +6,7 @@ import {
     useColorMode,
     Link,
     Button,
+    Box,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
 import { secondaryTextColor } from "../styles/colors";
@@ -17,7 +18,6 @@ import { frontMatter as notesPosts } from "../pages/notes/*.mdx";
 import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
 import Pilars from "../components/Pilars";
-import { Box } from "@chakra-ui/core";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -247,7 +247,10 @@ const Index: NextPage = () => {
                     <Pilars />
                     <Box pt={3} textAlign="center">
                         <NextLink href="/" passHref>
-                            <Link fontStyle="italic">
+                            <Link
+                                fontStyle="italic"
+                                color={secondaryTextColor[colorMode]}
+                            >
                                 Read: "Why fonts are the deciding factor?"
                             </Link>
                         </NextLink>
@@ -294,11 +297,60 @@ const Index: NextPage = () => {
                 <Flex
                     as="section"
                     flexDirection="column"
+                    justifyContent="flex-end"
+                    alignItems="flex-end"
+                    width="100%"
+                    mb={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Core
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pl={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                        textAlign="right"
+                    >
+                        Recompiled is a digital garden focused on explaining
+                        programming through great typography, minimalism and
+                        digital art.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
                     mb={8}
-                ></Flex>
+                >
+                    <Text as="span">Content soon</Text>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    my={["6rem", "20rem"]}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        What's next?
+                    </Heading>
+                </Flex>
             </Stack>
         </>
     );

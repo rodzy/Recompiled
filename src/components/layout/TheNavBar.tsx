@@ -6,13 +6,13 @@ import {
     Stack,
     useColorMode,
     Text,
+    Button,
 } from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import { navBgColor, secondaryTextColor } from "../../styles/colors";
 import { upperFirst } from "lodash";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NextLink from "next/link";
-import NextImage from "next/image";
 
 const StickyNav = styled(Flex)`
     position: sticky;
@@ -25,6 +25,18 @@ const StickyNav = styled(Flex)`
 const NavBar: React.FC = () => {
     const router = useRouter();
     const { colorMode, toggleColorMode } = useColorMode();
+    const [windowH, setWindowH] = useState({ currentScrollHeight: 0 });
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.onscroll = () => {
+                const newScrollHeight = Math.ceil(window.scrollY / 50) * 50;
+                if (windowH.currentScrollHeight != newScrollHeight) {
+                    setWindowH({ currentScrollHeight: newScrollHeight });
+                }
+            };
+        }
+    }, [windowH.currentScrollHeight === 0]);
 
     return (
         <StickyNav
@@ -35,7 +47,7 @@ const NavBar: React.FC = () => {
             width="100%"
             bg={navBgColor[colorMode]}
             as="nav"
-            p={3}
+            p={4}
             mt={[3, 6]}
             mb={8}
             mx="auto"
@@ -48,20 +60,6 @@ const NavBar: React.FC = () => {
                 width="100%"
             >
                 <Box display="flex" flexDirection="row">
-                    <NextLink href="/">
-                        <Box>
-                            <NextImage
-                                src="/images/Recompiled.png"
-                                width={35}
-                                height={35}
-                                alt="Recompiled - Logo"
-                                role="image"
-                                loading="lazy"
-                                className="logo-img"
-                            />
-                        </Box>
-                    </NextLink>
-
                     <Box>
                         <Text
                             pos="fixed"
@@ -77,13 +75,16 @@ const NavBar: React.FC = () => {
                 </Box>
                 <Box>
                     {router.pathname !== "/about" ? (
-                        // <NextLink href="/about" passHref>
-                        //     </NextLink>
-                        <IconButton
-                            aria-label="Menu tab"
-                            variant="outline"
-                            icon="settings"
-                        />
+                        <NextLink href="/about" passHref>
+                            <Button
+                                variant="outline"
+                                opacity={
+                                    windowH.currentScrollHeight === 0 ? 1 : 0
+                                }
+                            >
+                                About
+                            </Button>
+                        </NextLink>
                     ) : (
                         <NextLink href="/" passHref>
                             <IconButton
@@ -96,12 +97,15 @@ const NavBar: React.FC = () => {
                     )}
                     {router.pathname !== "/newsletter" ? (
                         <NextLink href="/newsletter" passHref>
-                            <IconButton
-                                aria-label="Subscribe to the newsletter"
+                            <Button
+                                ml={2}
                                 variant="outline"
-                                icon="bell"
-                                ml={3}
-                            />
+                                opacity={
+                                    windowH.currentScrollHeight === 0 ? 1 : 0
+                                }
+                            >
+                                Newsletter
+                            </Button>
                         </NextLink>
                     ) : (
                         <NextLink href="/" passHref>

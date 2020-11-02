@@ -15,7 +15,8 @@ const Pilars: React.FC = () => {
                 backgroundColor={colorMode === "dark" ? "#fff" : "#000"}
                 textAlign="center"
                 borderTopLeftRadius="0.4rem"
-                borderBottomLeftRadius="0.4rem"
+                borderTopRightRadius={["0.4rem", "0.4rem", 0, 0]}
+                borderBottomLeftRadius={[0, 0, "0.4rem", "0.4rem"]}
             >
                 <Text
                     fontSize={["10rem", "20rem"]}
@@ -30,8 +31,9 @@ const Pilars: React.FC = () => {
                 width={["100%", "100%", "50%"]}
                 backgroundColor={colorMode === "light" ? "#fff" : "#000"}
                 textAlign="center"
-                borderTopRightRadius="0.4rem"
+                borderTopRightRadius={[0, 0, "0.4rem", "0.4rem"]}
                 borderBottomRightRadius="0.4rem"
+                borderBottomLeftRadius={["0.4rem", "0.4rem", 0, 0]}
             >
                 <Text
                     fontSize={["10rem", "20rem"]}
