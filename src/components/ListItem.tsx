@@ -69,7 +69,7 @@ const ListItem: React.FC<Props> = ({ frontMatter }) => {
                             <Text
                                 color={secondaryTextColor[colorMode]}
                                 minWidth="105px"
-                                textAlign={["left", "right"]}
+                                textAlign="left"
                                 mb={[3, 3, 3, 0]}
                             >
                                 <Icon name="time" mb={1} mr={2} />

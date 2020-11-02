@@ -177,7 +177,7 @@ const Index: NextPage = () => {
                             <Text
                                 as="p"
                                 color={secondaryTextColor[colorMode]}
-                                width={["100%", "25rem"]}
+                                width={["100%", "100%", "100%", "25rem"]}
                                 pr={[0, 5]}
                             >
                                 Plain explainations of my general ideas and
@@ -291,6 +291,14 @@ const Index: NextPage = () => {
                 >
                     <Text as="span">Content soon</Text>
                 </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    mb={8}
+                ></Flex>
             </Stack>
         </>
     );
