@@ -6,9 +6,18 @@ import {
     Stack,
     useColorMode,
     Button,
+    useDisclosure,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    Input,
 } from "@chakra-ui/core";
 import { navBgColor } from "../../styles/colors";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 
@@ -26,8 +35,9 @@ const StickyNav = styled(Flex)`
 
 const NavBar: React.FC = () => {
     const { colorMode, toggleColorMode } = useColorMode();
+    const { isOpen, onOpen, onClose } = useDisclosure(false);
     const [windowH, setWindowH] = useState<Scroll>({ currentScrollHeight: 0 });
-    const [open, setOpen] = useState<boolean>(false);
+    const btnRef = useRef<React.RefObject<HTMLElement> | undefined>();
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -45,10 +55,11 @@ const NavBar: React.FC = () => {
             flexDirection="row"
             justifyContent="space-between"
             alignItems="center"
-            maxWidth="900px"
+            maxWidth="1000px"
             width="100%"
             bg={navBgColor[colorMode]}
             as="nav"
+            wrap="wrap"
             p={4}
             mt={[3, 10]}
             mb={8}
@@ -58,7 +69,7 @@ const NavBar: React.FC = () => {
                 flexDirection="row"
                 justifyContent="space-between"
                 alignItems="center"
-                maxWidth="900px"
+                maxWidth="1000px"
                 width="100%"
             >
                 <Box display="flex" flexDirection="row">
@@ -96,19 +107,17 @@ const NavBar: React.FC = () => {
                     <IconButton
                         aria-label="Menu"
                         display={["block", "block", "none", "none"]}
-                        icon={open ? "small-close" : "search"}
+                        icon={isOpen ? "small-close" : "search"}
                         variant="outline"
-                        onClick={() => {
-                            setOpen(!open);
-                        }}
+                        onClick={onOpen}
+                        ref={
+                            (btnRef as unknown) as
+                                | React.RefObject<HTMLElement>
+                                | undefined
+                        }
                     />
                     <Box
-                        display={[
-                            open ? "block" : "none",
-                            open ? "block" : "none",
-                            "flex",
-                            "flex",
-                        ]}
+                        display={["none", "none", "flex", "flex"]}
                         width={["full", "auto"]}
                         alignItems="center"
                         flexGrow={1}
@@ -122,6 +131,8 @@ const NavBar: React.FC = () => {
                                         ? "block"
                                         : "none",
                                 ]}
+                                mt={[4, 0]}
+                                mr={6}
                             >
                                 About
                             </Button>
@@ -129,7 +140,7 @@ const NavBar: React.FC = () => {
 
                         <NextLink href="/newsletter" passHref>
                             <Button
-                                ml={4}
+                                ml={[0, 4]}
                                 variant="link"
                                 display={[
                                     "block",
@@ -137,13 +148,15 @@ const NavBar: React.FC = () => {
                                         ? "block"
                                         : "none",
                                 ]}
+                                mt={[4, 0]}
+                                mr={6}
                             >
                                 Blog
                             </Button>
                         </NextLink>
                         <NextLink href="/newsletter" passHref>
                             <Button
-                                ml={4}
+                                ml={[0, 4]}
                                 variant="link"
                                 display={[
                                     "block",
@@ -151,13 +164,15 @@ const NavBar: React.FC = () => {
                                         ? "block"
                                         : "none",
                                 ]}
+                                mt={[4, 0]}
+                                mr={6}
                             >
                                 Notes
                             </Button>
                         </NextLink>
                         <NextLink href="/newsletter" passHref>
                             <Button
-                                ml={4}
+                                ml={[0, 4]}
                                 variant="link"
                                 display={[
                                     "block",
@@ -165,13 +180,15 @@ const NavBar: React.FC = () => {
                                         ? "block"
                                         : "none",
                                 ]}
+                                mt={[4, 0]}
+                                mr={6}
                             >
                                 Ideas
                             </Button>
                         </NextLink>
                         <NextLink href="/newsletter" passHref>
                             <Button
-                                ml={4}
+                                ml={[0, 4]}
                                 variant="link"
                                 display={[
                                     "block",
@@ -179,6 +196,8 @@ const NavBar: React.FC = () => {
                                         ? "block"
                                         : "none",
                                 ]}
+                                mt={[4, 0]}
+                                mr={6}
                             >
                                 Newsletter
                             </Button>
@@ -192,6 +211,40 @@ const NavBar: React.FC = () => {
                         ml={3}
                     />
                 </Flex>
+                <Drawer
+                    isOpen={isOpen}
+                    placement="bottom"
+                    onClose={onClose}
+                    finalFocusRef={
+                        (btnRef as unknown) as
+                            | React.RefObject<HTMLElement>
+                            | undefined
+                    }
+                    blockScrollOnMount={true}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                        <DrawerCloseButton />
+                        <DrawerContent>
+                            <DrawerHeader>Create your account</DrawerHeader>
+
+                            <DrawerBody>
+                                <Input placeholder="Type here..." />
+                            </DrawerBody>
+
+                            <DrawerFooter>
+                                <Button
+                                    variant="outline"
+                                    mr={3}
+                                    onClick={onClose}
+                                >
+                                    Cancel
+                                </Button>
+                                <Button color="blue">Save</Button>
+                            </DrawerFooter>
+                        </DrawerContent>
+                    </DrawerContent>
+                </Drawer>
             </Stack>
         </StickyNav>
     );
