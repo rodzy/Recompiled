@@ -5,14 +5,12 @@ import {
     IconButton,
     Stack,
     useColorMode,
-    Text,
     Button,
 } from "@chakra-ui/core";
-import { useRouter } from "next/router";
-import { navBgColor, secondaryTextColor } from "../../styles/colors";
-import { upperFirst } from "lodash";
+import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useState } from "react";
 import NextLink from "next/link";
+import NextImage from "next/image";
 
 const StickyNav = styled(Flex)`
     position: sticky;
@@ -23,7 +21,6 @@ const StickyNav = styled(Flex)`
 `;
 
 const NavBar: React.FC = () => {
-    const router = useRouter();
     const { colorMode, toggleColorMode } = useColorMode();
     const [windowH, setWindowH] = useState({ currentScrollHeight: 0 });
 
@@ -61,62 +58,67 @@ const NavBar: React.FC = () => {
             >
                 <Box display="flex" flexDirection="row">
                     <Box>
-                        <Text
-                            pos="fixed"
-                            as="span"
-                            color={secondaryTextColor[colorMode]}
-                            p={3}
-                            pl={6}
-                            opacity={0.5}
-                        >
-                            {upperFirst(router.pathname.replace("/", ""))}
-                        </Text>
+                        <NextLink href="/">
+                            <Box>
+                                <NextImage
+                                    src="/images/Recompiled.png"
+                                    width={35}
+                                    height={35}
+                                    alt="Recompiled - Logo"
+                                    role="image"
+                                    loading="lazy"
+                                    className="logo-img"
+                                />
+                            </Box>
+                        </NextLink>
                     </Box>
                 </Box>
                 <Box>
-                    {router.pathname !== "/about" ? (
-                        <NextLink href="/about" passHref>
-                            <Button
-                                variant="outline"
-                                opacity={
-                                    windowH.currentScrollHeight === 0 ? 1 : 0
-                                }
-                            >
-                                About
-                            </Button>
-                        </NextLink>
-                    ) : (
-                        <NextLink href="/" passHref>
-                            <IconButton
-                                aria-label="Back to the homepage"
-                                variant="outline"
-                                icon="triangle-up"
-                                ml={3}
-                            />
-                        </NextLink>
-                    )}
-                    {router.pathname !== "/newsletter" ? (
-                        <NextLink href="/newsletter" passHref>
-                            <Button
-                                ml={2}
-                                variant="outline"
-                                opacity={
-                                    windowH.currentScrollHeight === 0 ? 1 : 0
-                                }
-                            >
-                                Newsletter
-                            </Button>
-                        </NextLink>
-                    ) : (
-                        <NextLink href="/" passHref>
-                            <IconButton
-                                aria-label="Back to the homepage"
-                                variant="outline"
-                                icon="triangle-up"
-                                ml={3}
-                            />
-                        </NextLink>
-                    )}
+                    <NextLink href="/about" passHref>
+                        <Button
+                            variant="link"
+                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
+                        >
+                            About
+                        </Button>
+                    </NextLink>
+
+                    <NextLink href="/newsletter" passHref>
+                        <Button
+                            ml={4}
+                            variant="link"
+                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
+                        >
+                            Blog
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/newsletter" passHref>
+                        <Button
+                            ml={4}
+                            variant="link"
+                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
+                        >
+                            Notes
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/newsletter" passHref>
+                        <Button
+                            ml={4}
+                            variant="link"
+                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
+                        >
+                            Ideas
+                        </Button>
+                    </NextLink>
+                    <NextLink href="/newsletter" passHref>
+                        <Button
+                            ml={4}
+                            variant="link"
+                            opacity={windowH.currentScrollHeight === 0 ? 1 : 0}
+                        >
+                            Newsletter
+                        </Button>
+                    </NextLink>
                     <IconButton
                         aria-label="Toggle dark mode"
                         variant="outline"
