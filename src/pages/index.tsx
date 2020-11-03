@@ -58,7 +58,7 @@ const Index: NextPage = () => {
                         letterSpacing="tight"
                         mb={2}
                         as="h1"
-                        fontSize={["3.2rem", "5xl", "6xl"]}
+                        fontSize={["3.2rem", "5xl", "7rem"]}
                     >
                         Recompiled
                     </Heading>
@@ -70,9 +70,9 @@ const Index: NextPage = () => {
                         pr={[0, 0, "10rem"]}
                         lineHeight={["normal", "tall"]}
                     >
-                        A digital space for blog posts, notes and ideas about
-                        programming and the modern web from Isaac Rodríguez
-                        perspective.
+                        Isaac Rodríguez&apos;s digital garden composed by blog
+                        posts, notes and ideas about programming and the modern
+                        web from his perspective.
                     </Heading>
                     <Heading as="h3" fontSize={["xl", "2xl"]}>
                         Who is Isaac Rodríguez?{" "}
@@ -83,49 +83,7 @@ const Index: NextPage = () => {
                         </NextLink>
                     </Heading>
                 </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    width="100%"
-                >
-                    <Heading
-                        as="h2"
-                        letterSpacing="tight"
-                        mb={2}
-                        size="xl"
-                        fontWeight={700}
-                    >
-                        Latest
-                    </Heading>
-                    <Text as="p" color={secondaryTextColor[colorMode]}>
-                        A list of curated posts about web development, best
-                        practices, and more detailed information about ongoing
-                        personal projects or OSS community tendencies.
-                    </Text>
-                    <Flex flexDirection="column">
-                        <Flex mt={4} flexDirection="column">
-                            {blogPosts.map((item) => (
-                                <ListItem
-                                    key={item.pageTitle}
-                                    frontMatter={item}
-                                />
-                            ))}
-                        </Flex>
-                    </Flex>
-                    <Flex justifyContent="center" width="100%">
-                        <NextLink href="/" passHref>
-                            <Button
-                                leftIcon="external-link"
-                                variant="outline"
-                                boxShadow="md"
-                            >
-                                Visit the blog
-                            </Button>
-                        </NextLink>
-                    </Flex>
-                </Flex>
+
                 <Flex
                     as="section"
                     flexDirection="column"
@@ -192,7 +150,7 @@ const Index: NextPage = () => {
                         as="h1"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Code
+                        The garden
                     </Heading>
                     <Heading
                         as="h2"
@@ -203,10 +161,53 @@ const Index: NextPage = () => {
                         lineHeight={["normal", "tall"]}
                         textAlign="left"
                     >
-                        Recompiled is a digital garden focused on explaining
-                        programming through great typography, minimalism and
-                        digital art.
+                        Isaac Rodríguez cultivates this garden with his
+                        experiences and knowledge about programming, web
+                        development and design.
                     </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                >
+                    <Heading
+                        as="h2"
+                        letterSpacing="tight"
+                        mb={2}
+                        size="xl"
+                        fontWeight={700}
+                    >
+                        Latest
+                    </Heading>
+                    <Text as="p" color={secondaryTextColor[colorMode]}>
+                        A list of curated posts about web development, best
+                        practices, and more detailed information about ongoing
+                        personal projects or OSS community tendencies.
+                    </Text>
+                    <Flex flexDirection="column">
+                        <Flex mt={4} flexDirection="column">
+                            {blogPosts.map((item) => (
+                                <ListItem
+                                    key={item.pageTitle}
+                                    frontMatter={item}
+                                />
+                            ))}
+                        </Flex>
+                    </Flex>
+                    <Flex justifyContent="center" width="100%">
+                        <NextLink href="/" passHref>
+                            <Button
+                                leftIcon="external-link"
+                                variant="outline"
+                                boxShadow="md"
+                            >
+                                Visit the blog
+                            </Button>
+                        </NextLink>
+                    </Flex>
                 </Flex>
                 <Flex
                     as="section"
