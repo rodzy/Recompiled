@@ -91,7 +91,7 @@ const Index: NextPage = () => {
                         size="xl"
                         fontWeight={700}
                     >
-                        Blog
+                        Latest
                     </Heading>
                     <Text as="p" color={secondaryTextColor[colorMode]}>
                         A list of curated posts about web development, best
@@ -99,9 +99,6 @@ const Index: NextPage = () => {
                         personal projects or OSS community tendencies.
                     </Text>
                     <Flex flexDirection="column">
-                        <Heading as="h3" size="lg" my={2}>
-                            The latest posts
-                        </Heading>
                         <Flex mt={4} flexDirection="column">
                             {blogPosts.map((item) => (
                                 <ListItem
@@ -122,6 +119,104 @@ const Index: NextPage = () => {
                             </Button>
                         </NextLink>
                     </Flex>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-end"
+                    alignItems="flex-end"
+                    width="100%"
+                    my={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Essence
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pl={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                        textAlign="right"
+                    >
+                        The bases of Recompiled are found around minimalism,
+                        programming, typography and design.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                >
+                    <CoreTri />
+                    <Box textAlign="center">
+                        <NextLink href="/" passHref>
+                            <Link
+                                fontStyle="italic"
+                                color={secondaryTextColor[colorMode]}
+                            >
+                                Read: "The four elements formula"
+                            </Link>
+                        </NextLink>
+                    </Box>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                    my={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Typography
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pr={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                        textAlign="left"
+                    >
+                        Recompiled is a digital garden focused on explaining
+                        programming through great typography, minimalism and
+                        digital art.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    my={8}
+                >
+                    <Pilars />
+                    <Box pt={3} textAlign="center">
+                        <NextLink href="/" passHref>
+                            <Link
+                                fontStyle="italic"
+                                color={secondaryTextColor[colorMode]}
+                            >
+                                Read: "Why fonts are the deciding factor?"
+                            </Link>
+                        </NextLink>
+                    </Box>
                 </Flex>
                 <Flex
                     as="section"
@@ -210,56 +305,6 @@ const Index: NextPage = () => {
                 <Flex
                     as="section"
                     flexDirection="column"
-                    justifyContent="flex-end"
-                    alignItems="flex-end"
-                    width="100%"
-                    mb={8}
-                >
-                    <Heading
-                        letterSpacing="tight"
-                        mb={2}
-                        as="h1"
-                        fontSize={["4xl", "5xl", "6xl"]}
-                    >
-                        Typography
-                    </Heading>
-                    <Heading
-                        as="h2"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pl={[0, 0, "10rem"]}
-                        lineHeight={["normal", "tall"]}
-                        textAlign="right"
-                    >
-                        Recompiled is a digital garden focused on explaining
-                        programming through great typography, minimalism and
-                        digital art.
-                    </Heading>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    width="100%"
-                    my={8}
-                >
-                    <Pilars />
-                    <Box pt={3} textAlign="center">
-                        <NextLink href="/" passHref>
-                            <Link
-                                fontStyle="italic"
-                                color={secondaryTextColor[colorMode]}
-                            >
-                                Read: "Why fonts are the deciding factor?"
-                            </Link>
-                        </NextLink>
-                    </Box>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
                     width="100%"
@@ -294,46 +339,6 @@ const Index: NextPage = () => {
                     mb={8}
                 >
                     <Text as="span">Content soon</Text>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="flex-end"
-                    alignItems="flex-end"
-                    width="100%"
-                    mb={8}
-                >
-                    <Heading
-                        letterSpacing="tight"
-                        mb={2}
-                        as="h1"
-                        fontSize={["4xl", "5xl", "6xl"]}
-                    >
-                        Core
-                    </Heading>
-                    <Heading
-                        as="h2"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pl={[0, 0, "10rem"]}
-                        lineHeight={["normal", "tall"]}
-                        textAlign="right"
-                    >
-                        Recompiled is a digital garden focused on explaining
-                        programming through great typography, minimalism and
-                        digital art.
-                    </Heading>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    width="100%"
-                    mb={8}
-                >
-                    <CoreTri/>
                 </Flex>
                 <Flex
                     as="section"

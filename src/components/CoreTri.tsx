@@ -2,7 +2,12 @@ import { Box } from "@chakra-ui/core";
 
 const CoreTri: React.FC = () => {
     return (
-        <Box width="100%" mb="10rem" display="flex" justifyContent="center">
+        <Box
+            width="100%"
+            mb={["15rem", "15rem", "33rem"]}
+            display="flex"
+            justifyContent="center"
+        >
             <Box
                 pos="absolute"
                 width={0}
