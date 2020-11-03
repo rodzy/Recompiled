@@ -47,7 +47,8 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                         borderBottom={`1px solid rgba(255,255,255,0.16)`}
                         fontWeight="700"
                     >
-                        <Icon name="drag-handle" mb={1} p="1px" /> Navigation
+                        Navigation{" "}
+                        <Icon name="up-down" mb={1} p="1px" onClick={onClose} />
                     </DrawerHeader>
                     <DrawerBody mb={10}>
                         <Flex
@@ -55,15 +56,14 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             justifyContent="space-around"
                             wrap="wrap"
                             width="100%"
-                            py={2}
+                            py={1}
                         >
                             <NextLink href="/" passHref>
                                 <Button
                                     leftIcon="arrow-forward"
-                                    variant="outline"
-                                    mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    variant="unstyled"
+                                    mt={1}
+                                    width="100%"
                                     fontWeight="600"
                                 >
                                     Home
@@ -72,10 +72,9 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             <NextLink href="/about" passHref>
                                 <Button
                                     leftIcon="at-sign"
-                                    variant="outline"
+                                    variant="unstyled"
                                     mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    width="100%"
                                     fontWeight="600"
                                 >
                                     About
@@ -85,10 +84,9 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             <NextLink href="/newsletter" passHref>
                                 <Button
                                     leftIcon="external-link"
-                                    variant="outline"
+                                    variant="unstyled"
                                     mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    width="100%"
                                     fontWeight="600"
                                 >
                                     Blog
@@ -97,10 +95,10 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             <NextLink href="/newsletter" passHref>
                                 <Button
                                     leftIcon="attachment"
-                                    variant="outline"
+                                    variant="unstyled"
                                     mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    width="100%"
+                                    fontWeight="600"
                                 >
                                     Notes
                                 </Button>
@@ -108,10 +106,9 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             <NextLink href="/newsletter" passHref>
                                 <Button
                                     leftIcon="star"
-                                    variant="outline"
+                                    variant="unstyled"
                                     mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    width="100%"
                                     fontWeight="600"
                                 >
                                     Ideas
@@ -119,11 +116,10 @@ const TheDrawer: React.FC<DrawerProps> = ({ onClose, open, refObj }) => {
                             </NextLink>
                             <NextLink href="/newsletter" passHref>
                                 <Button
-                                    leftIcon="chat"
-                                    variant="outline"
+                                    leftIcon="calendar"
+                                    variant="unstyled"
                                     mt={4}
-                                    width="48%"
-                                    boxShadow="md"
+                                    width="100%"
                                     fontWeight="600"
                                 >
                                     Newsletter
