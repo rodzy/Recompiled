@@ -7,19 +7,12 @@ import {
     useColorMode,
     Button,
     useDisclosure,
-    Drawer,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    Input,
 } from "@chakra-ui/core";
 import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useRef, useState } from "react";
 import NextLink from "next/link";
 import NextImage from "next/image";
+import TheDrawer from "./TheDrawer";
 
 interface Scroll {
     currentScrollHeight: number;
@@ -211,41 +204,11 @@ const NavBar: React.FC = () => {
                         ml={3}
                     />
                 </Flex>
-                <Drawer
-                    isOpen={isOpen}
-                    placement="bottom"
+                <TheDrawer
                     onClose={onClose}
-                    finalFocusRef={
-                        (btnRef as unknown) as
-                            | React.RefObject<HTMLElement>
-                            | undefined
-                    }
-                    blockScrollOnMount={false}
-                    closeOnEsc
-                >
-                    <DrawerOverlay />
-                    <DrawerContent>
-                        <DrawerCloseButton />
-                        <DrawerContent>
-                            <DrawerHeader>Create your account</DrawerHeader>
-
-                            <DrawerBody>
-                                <Input placeholder="Type here..." />
-                            </DrawerBody>
-
-                            <DrawerFooter>
-                                <Button
-                                    variant="outline"
-                                    mr={3}
-                                    onClick={onClose}
-                                >
-                                    Cancel
-                                </Button>
-                                <Button color="blue">Save</Button>
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </DrawerContent>
-                </Drawer>
+                    open={isOpen}
+                    refObj={(btnRef as unknown) as React.RefObject<HTMLElement>}
+                />
             </Stack>
         </StickyNav>
     );

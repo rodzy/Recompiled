@@ -51,7 +51,7 @@ const Index: NextPage = () => {
                         letterSpacing="tight"
                         mb={2}
                         as="h1"
-                        fontSize={["4xl", "5xl", "6xl"]}
+                        fontSize={["3.2rem", "5xl", "6xl"]}
                     >
                         Recompiled
                     </Heading>

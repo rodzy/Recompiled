@@ -33,9 +33,9 @@ const theme: DefaultTheme = {
     shadows: {
         sm: "",
         md: "rgba(52, 61, 68, 0.1) 0px 1px 2px",
-        lg: "",
-        xl: "",
-        "2xl": "",
+        lg: "rgba(52, 61, 68, 0.1) 0px 3px 6px",
+        xl: "rgba(52, 61, 68, 0.1) 0px 5px 10px",
+        "2xl": "rgba(52, 61, 68, 0.1) 0px 10px 20px",
         inner: "",
         none: "",
         outline: "0 0 0 3px rgb(76 175 80 / 64%)",

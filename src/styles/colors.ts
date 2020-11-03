@@ -15,6 +15,11 @@ export const bg: Color = {
     dark: "rgba(19,20,21,0.45)",
 };
 
+export const plainBg: Color = {
+    light: "#fff",
+    dark: "#131415",
+};
+
 export const pText: Color = {
     light: "#000",
     dark: "#fafbfc",
@@ -27,5 +32,5 @@ export const navBgColor: Color = {
 
 export const borderColors: Color = {
     light: "#E2E8F0",
-    dark:"rgba(255,255,255,0.16)"
-}
+    dark: "rgba(255,255,255,0.16)",
+};
