@@ -18,6 +18,7 @@ import { frontMatter as notesPosts } from "../pages/notes/*.mdx";
 import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
 import Pilars from "../components/Pilars";
+import CoreTri from "../components/CoreTri";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -220,7 +221,7 @@ const Index: NextPage = () => {
                         as="h1"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Focus
+                        Typography
                     </Heading>
                     <Heading
                         as="h2"
@@ -332,7 +333,7 @@ const Index: NextPage = () => {
                     width="100%"
                     mb={8}
                 >
-                    <Text as="span">Content soon</Text>
+                    <CoreTri/>
                 </Flex>
                 <Flex
                     as="section"
