@@ -19,7 +19,7 @@ import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
 import Pilars from "../components/Pilars";
 import CoreTri from "../components/CoreTri";
-import Principals from "../components/Principals";
+import Image from "next/image";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -75,14 +75,6 @@ const Index: NextPage = () => {
                         posts, notes and ideas about programming and the modern
                         web from his perspective.
                     </Heading>
-                    <Heading as="h3" fontSize={["xl", "2xl"]}>
-                        Who is Isaac Rodríguez?{" "}
-                        <NextLink href="/about" passHref>
-                            <LearnLink color={secondaryTextColor[colorMode]}>
-                                About him
-                            </LearnLink>
-                        </NextLink>
-                    </Heading>
                 </Flex>
                 <Flex
                     as="section"
@@ -90,13 +82,45 @@ const Index: NextPage = () => {
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
-                    my={8}
+                    mb={8}
                 >
-                    {/* <Principals /> */}
-                    <Box>
-                        <Text>Hi</Text>
+                    <Box width={["100%", "50%"]}>
+                        <Heading as="h2" fontSize={["xl", "2xl"]}>
+                            Who is Isaac Rodríguez?{" "}
+                        </Heading>
+                        <Text as="p" my={2} fontSize={["xl", "xl"]}>
+                            He's a front-end developer and new web technologies
+                            enthusiast, focused on great design and creative
+                            code. He's a front-end developer and new web
+                            technologies enthusiast, focused on great design and
+                            creative code. He's a front-end developer and new
+                            web technologies enthusiast, focused on great design
+                            and creative code. He's a front-end developer and
+                            new web technologies enthusiast, focused on great
+                            design and creative code.
+                        </Text>
+                        <Flex justifyContent="flex-end">
+                            <NextLink href="/about" passHref>
+                                <Button
+                                    rightIcon="arrow-forward"
+                                    variant="outline"
+                                    boxShadow="md"
+                                >
+                                    Learn more about him
+                                </Button>
+                            </NextLink>
+                        </Flex>
                     </Box>
-                    <img src="/images/vectorpaint.png" alt="vector" />
+                    <Box pt={["1rem",0]}>
+                        <Image
+                            src="/images/vectorpaint.png"
+                            alt="recompiled-vector"
+                            loading="lazy"
+                            width={500}
+                            height={500}
+                            quality={100}
+                        />
+                    </Box>
                 </Flex>
                 <Flex
                     as="section"
