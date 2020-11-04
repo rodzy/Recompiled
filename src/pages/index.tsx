@@ -31,7 +31,7 @@ const LearnLink = styled(Link)`
 
 const CustomSpan = styled(Text)`
     &:hover {
-        color: rgba(25, 166, 67, 1);
+        color: rgba(64, 158, 246, 0.7841);
     }
 `;
 

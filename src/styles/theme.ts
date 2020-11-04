@@ -38,7 +38,7 @@ const theme: DefaultTheme = {
         "2xl": "rgba(52, 61, 68, 0.1) 0px 10px 20px",
         inner: "",
         none: "",
-        outline: "0 0 0 3px rgb(76 175 80 / 64%)",
+        outline: "0 0 0 3px rgba(64, 158, 246, 0.7841)",
     },
     lineHeights: {
         none: "0rem",

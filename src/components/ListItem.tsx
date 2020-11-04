@@ -19,7 +19,7 @@ interface Props {
 const CustomBox = styled(Box)`
     transition: 0.2s ease-in-out;
     &:hover {
-        border-top: 3px solid rgba(25, 166, 67, 1);
+        border-top: 3px solid rgba(64, 158, 246, 0.7841);
     }
 `;
 

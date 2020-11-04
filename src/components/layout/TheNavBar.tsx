@@ -91,7 +91,7 @@ const NavBar: React.FC = () => {
                                         height={35}
                                         alt="Recompiled - Logo"
                                         role="img"
-                                        loading="lazy"
+                                        loading="eager"
                                         quality={100}
                                         className="logo-img"
                                     />
