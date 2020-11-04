@@ -4,7 +4,7 @@ const CoreTri: React.FC = () => {
     return (
         <Box
             width="100%"
-            mb={["15rem", "15rem", "33rem"]}
+            mb={["15rem", "15rem", "20rem", "33rem"]}
             display="flex"
             justifyContent="center"
         >
@@ -16,14 +16,12 @@ const CoreTri: React.FC = () => {
                     "200px solid rgba(19,20,21,0.45)",
                     "200px solid rgba(19,20,21,0.45)",
                     "300px solid rgba(19,20,21,0.45)",
-                    "400px solid rgba(19,20,21,0.45)",
                     "500px solid rgba(19,20,21,0.45)",
                 ]}
                 borderLeft={[
                     "200px solid transparent",
                     "200px solid transparent",
                     "300px solid transparent",
-                    "400px solid transparent",
                     "500px solid transparent",
                 ]}
                 zIndex={1}
@@ -37,14 +35,12 @@ const CoreTri: React.FC = () => {
                     "200px solid white",
                     "200px solid white",
                     "300px solid white",
-                    "400px solid white",
                     "500px solid white",
                 ]}
                 borderRight={[
                     "200px solid transparent",
                     "200px solid transparent",
                     "300px solid transparent",
-                    "400px solid transparent",
                     "500px solid transparent",
                 ]}
                 boxShadow="xl"
@@ -57,14 +53,12 @@ const CoreTri: React.FC = () => {
                     "200px solid #000",
                     "200px solid #000",
                     "300px solid #000",
-                    "400px solid #000",
                     "500px solid #000",
                 ]}
                 borderLeft={[
                     "200px solid transparent",
                     "200px solid transparent",
                     "300px solid transparent",
-                    "400px solid transparent",
                     "500px solid transparent",
                 ]}
                 boxShadow="md"

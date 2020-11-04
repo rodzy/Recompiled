@@ -19,6 +19,7 @@ import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
 import Pilars from "../components/Pilars";
 import CoreTri from "../components/CoreTri";
+import Principals from "../components/Principals";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
@@ -83,58 +84,15 @@ const Index: NextPage = () => {
                         </NextLink>
                     </Heading>
                 </Flex>
-
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    width="100%"
-                    my={8}
-                >
-                    <Heading
-                        letterSpacing="tight"
-                        mb={2}
-                        as="h1"
-                        fontSize={["4xl", "5xl", "6xl"]}
-                    >
-                        Essence
-                    </Heading>
-                    <Heading
-                        as="h2"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pr={[0, 0, "10rem"]}
-                        lineHeight={["normal", "tall"]}
-                        textAlign="left"
-                    >
-                        The bases of Recompiled are found around minimalism,
-                        programming, typography and design.
-                    </Heading>
-                </Flex>
                 <Flex
                     as="section"
                     flexDirection="column"
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
+                    my={8}
                 >
-                    <CoreTri />
-                    <Box textAlign="center">
-                        <NextLink href="/" passHref>
-                            <Link
-                                fontStyle="italic"
-                                color={secondaryTextColor[colorMode]}
-                            >
-                                Read:{" "}
-                                <CustomSpan as="span">
-                                    {" "}
-                                    "The four elements formula"
-                                </CustomSpan>
-                            </Link>
-                        </NextLink>
-                    </Box>
+                    <Principals />
                 </Flex>
                 <Flex
                     as="section"
@@ -300,6 +258,59 @@ const Index: NextPage = () => {
                     alignItems="flex-start"
                     width="100%"
                     my={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        mb={2}
+                        as="h1"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                    >
+                        Essence
+                    </Heading>
+                    <Heading
+                        as="h2"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pr={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                        textAlign="left"
+                    >
+                        The bases of Recompiled are found around minimalism,
+                        programming, typography and design.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                >
+                    <CoreTri />
+                    <Box textAlign="center">
+                        <NextLink href="/" passHref>
+                            <Link
+                                fontStyle="italic"
+                                color={secondaryTextColor[colorMode]}
+                            >
+                                Read:{" "}
+                                <CustomSpan as="span">
+                                    {" "}
+                                    "The four elements formula"
+                                </CustomSpan>
+                            </Link>
+                        </NextLink>
+                    </Box>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                    mt={["2rem", "4rem"]}
+                    mb={8}
                 >
                     <Heading
                         letterSpacing="tight"
