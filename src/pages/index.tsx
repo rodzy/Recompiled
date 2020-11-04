@@ -86,13 +86,17 @@ const Index: NextPage = () => {
                 </Flex>
                 <Flex
                     as="section"
-                    flexDirection="column"
+                    flexDirection={["column", "row"]}
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
                     my={8}
                 >
-                    <Principals />
+                    {/* <Principals /> */}
+                    <Box>
+                        <Text>Hi</Text>
+                    </Box>
+                    <img src="/images/vectorpaint.png" alt="vector" />
                 </Flex>
                 <Flex
                     as="section"
