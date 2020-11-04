@@ -1,6 +1,6 @@
 const title = "Recompiled — Digital Garden by Isaac Rodríguez";
 const description =
-    "A digital space for blog posts, notes and ideas about programming and the modern web from Isaac Rodríguez perspective.";
+    "Isaac Rodríguez's digital garden composed by blog posts, notes and ideas about programming and the modern web from his perspective.";
 
 const SEO = {
     title,
