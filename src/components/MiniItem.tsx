@@ -46,7 +46,7 @@ const MiniItem: React.FC<Props> = ({ frontMatter }) => {
                         justifyContent="space-between"
                         flexDirection={["column", "row"]}
                     >
-                        <Heading size="md" as="h3" mb={2} fontWeight="medium">
+                        <Heading size="md" as="h4" mb={2} fontWeight="medium">
                             {frontMatter.pageTitle}
                         </Heading>
                     </Flex>

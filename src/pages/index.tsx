@@ -24,7 +24,7 @@ import Image from "next/image";
 const LearnLink = styled(Link)`
     text-decoration: underline;
     &:hover {
-        color: rgba(25, 166, 67, 1);
+        color: rgba(64, 158, 246, 0.7841);
         text-decoration: none;
     }
 `;
@@ -64,7 +64,7 @@ const Index: NextPage = () => {
                         Recompiled
                     </Heading>
                     <Heading
-                        as="h2"
+                        as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
@@ -78,26 +78,63 @@ const Index: NextPage = () => {
                 </Flex>
                 <Flex
                     as="section"
-                    flexDirection={["column", "row"]}
+                    flexDirection={["column", "column", "row"]}
                     justifyContent="center"
                     alignItems="center"
                     width="100%"
                     mb={8}
                 >
-                    <Box width={["100%", "50%"]}>
+                    <Box width={["100%", "100%", "50%"]}>
                         <Heading as="h2" fontSize={["xl", "2xl"]}>
                             Who is Isaac Rodríguez?{" "}
                         </Heading>
-                        <Text as="p" my={2} fontSize={["xl", "xl"]}>
-                            He's a front-end developer and new web technologies
-                            enthusiast, focused on great design and creative
-                            code. He's a front-end developer and new web
-                            technologies enthusiast, focused on great design and
-                            creative code. He's a front-end developer and new
-                            web technologies enthusiast, focused on great design
-                            and creative code. He's a front-end developer and
-                            new web technologies enthusiast, focused on great
-                            design and creative code.
+                        <Text
+                            as="p"
+                            my={2}
+                            fontSize={["md", "xl"]}
+                            color={secondaryTextColor[colorMode]}
+                            textAlign={[
+                                "initial",
+                                "initial",
+                                "initial",
+                                "justify",
+                            ]}
+                        >
+                            He's an engineer, designer, and frontend web
+                            development enthusiast, focused on developing
+                            creative and efficient software. He combines his
+                            coding skills with his drive for great design and
+                            accessibility to make sure his work doesn't go
+                            unnoticed.
+                        </Text>
+                        <Text
+                            as="p"
+                            my={2}
+                            fontSize={["md", "xl"]}
+                            color={secondaryTextColor[colorMode]}
+                            textAlign={[
+                                "initial",
+                                "initial",
+                                "initial",
+                                "justify",
+                            ]}
+                        >
+                            He's a new web technologies enthusiast, fan of
+                            geometrical shapes and abstract designs. You can
+                            find him on{" "}
+                            <LearnLink
+                                href="https://github.com/rodzy"
+                                isExternal
+                            >
+                                GitHub
+                            </LearnLink> and{" "}
+                            <LearnLink
+                                href="https://twitter.com/rodzyrm"
+                                isExternal
+                            >
+                                Twitter
+                            </LearnLink>.{" "} 
+                            Find more details in his about page
                         </Text>
                         <Flex justifyContent="flex-end">
                             <NextLink href="/about" passHref>
@@ -106,15 +143,15 @@ const Index: NextPage = () => {
                                     variant="outline"
                                     boxShadow="md"
                                 >
-                                    Learn more about him
+                                    Learn more
                                 </Button>
                             </NextLink>
                         </Flex>
                     </Box>
-                    <Box pt={["1rem",0]}>
+                    <Box pt={["1rem", 0]}>
                         <Image
-                            src="/images/vectorpaint.png"
-                            alt="recompiled-vector"
+                            src="/images/mirrored-by-rodzy.svg"
+                            alt="mirrored-by-rodzy"
                             loading="lazy"
                             width={500}
                             height={500}
@@ -132,14 +169,15 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
+                        lineHeight={["1.25"]}
                         mb={2}
-                        as="h1"
+                        as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        The garden
+                        Digital garden
                     </Heading>
                     <Heading
-                        as="h2"
+                        as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
@@ -160,7 +198,7 @@ const Index: NextPage = () => {
                     width="100%"
                 >
                     <Heading
-                        as="h2"
+                        as="h3"
                         letterSpacing="tight"
                         mb={2}
                         size="xl"
@@ -210,7 +248,7 @@ const Index: NextPage = () => {
                         justifyContent="space-around"
                     >
                         <Flex flexDirection="column">
-                            <Heading as="h2" mb={2}>
+                            <Heading as="h3" mb={2}>
                                 Notes
                             </Heading>
                             <Text
@@ -244,7 +282,7 @@ const Index: NextPage = () => {
                             </Flex>
                         </Flex>
                         <Flex flexDirection="column" pl={[0, 0, 3]}>
-                            <Heading as="h2" mb={2}>
+                            <Heading as="h3" mb={2}>
                                 Ideas
                             </Heading>
                             <Text
@@ -289,14 +327,15 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
+                        lineHeight={["1.25"]}
                         mb={2}
-                        as="h1"
+                        as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Essence
+                        Essentials
                     </Heading>
                     <Heading
-                        as="h2"
+                        as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
@@ -343,13 +382,13 @@ const Index: NextPage = () => {
                     <Heading
                         letterSpacing="tight"
                         mb={2}
-                        as="h1"
+                        as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
                         Typography
                     </Heading>
                     <Heading
-                        as="h2"
+                        as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
@@ -397,13 +436,13 @@ const Index: NextPage = () => {
                     <Heading
                         letterSpacing="tight"
                         mb={2}
-                        as="h1"
+                        as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
                         Art
                     </Heading>
                     <Heading
-                        as="h2"
+                        as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
                         pb={[3, 6]}
@@ -435,7 +474,7 @@ const Index: NextPage = () => {
                     <Heading
                         letterSpacing="tight"
                         mb={2}
-                        as="h1"
+                        as="h3"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
                         What's next?

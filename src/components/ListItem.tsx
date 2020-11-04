@@ -53,7 +53,7 @@ const ListItem: React.FC<Props> = ({ frontMatter }) => {
                         justifyContent="space-between"
                         flexDirection={["column", "column", "column", "row"]}
                     >
-                        <Heading size="md" as="h3" mb={2} fontWeight="medium">
+                        <Heading size="md" as="h4" mb={2} fontWeight="medium">
                             {frontMatter.pageTitle}
                         </Heading>
                         <Flex flexDirection="column">

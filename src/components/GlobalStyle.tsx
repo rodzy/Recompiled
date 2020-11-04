@@ -18,8 +18,8 @@ const GlobalStyle: React.FC<StyleProps> = ({ children }) => {
                     ${colorMode === "light" ? lightTheme : darkTheme};
                     ::selection {
                         background-color: ${colorMode === "light"
-                            ? "rgba(25,166,67,1)"
-                            : "rgba(25,166,67,1)"};
+                            ? "#000"
+                            : "#000"};
                         color: #fefefe;
                     }
                     html {

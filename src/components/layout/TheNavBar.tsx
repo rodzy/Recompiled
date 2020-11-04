@@ -72,23 +72,27 @@ const NavBar: React.FC = () => {
                                 {windowH.currentScrollHeight === 0 ? (
                                     <div>
                                         <NextImage
+                                            aria-roledescription="Recompiled - Logo"
                                             src="/images/Recompiled-Dark.png"
                                             width={35}
                                             height={35}
                                             alt="Recompiled - Logo"
-                                            role="image"
-                                            loading="eager"
+                                            role="img"
+                                            loading="lazy"
+                                            quality={100}
                                             className="logo-img"
                                         />
                                     </div>
                                 ) : (
                                     <NextImage
+                                        aria-roledescription="Recompiled - Logo"
                                         src="/images/Recompiled.png"
                                         width={35}
                                         height={35}
                                         alt="Recompiled - Logo"
-                                        role="image"
-                                        loading="eager"
+                                        role="img"
+                                        loading="lazy"
+                                        quality={100}
                                         className="logo-img"
                                     />
                                 )}
