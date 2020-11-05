@@ -95,9 +95,9 @@ const Index: NextPage = () => {
                             ]}
                         >
                             He's an engineer, designer, and frontend web
-                            development enthusiast, focused on developing
-                            creative and efficient software. He combines his
-                            coding skills with his drive for great design and
+                            development enthusiast. He's focused on developing
+                            creative and efficient software combining his coding
+                            skills with his drive for great design and
                             accessibility to make sure his work doesn't go
                             unnoticed.
                         </Text>
@@ -113,9 +113,8 @@ const Index: NextPage = () => {
                                 "justify",
                             ]}
                         >
-                            He's a new web technologies enthusiast, fan of
-                            geometrical shapes and abstract designs. You can
-                            find him on{" "}
+                            He's a fan of polyhedras, geometrical shapes and
+                            abstract designs. You can find him on{" "}
                             <LearnLink
                                 href="https://github.com/rodzy"
                                 isExternal
@@ -164,12 +163,13 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
-                        lineHeight={["1.25"]}
-                        mb={2}
+                        lineHeight={["1"]}
+                        my={8}
                         as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Digital garden
+                        Digital <br />
+                        garden
                     </Heading>
                     <Heading
                         as="p"
@@ -317,12 +317,13 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
-                        lineHeight={["1.25"]}
-                        mb={2}
+                        lineHeight={["1"]}
+                        my={8}
                         as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Essentials
+                        The four
+                        <br /> elements
                     </Heading>
                     <Heading
                         as="p"
@@ -383,7 +384,8 @@ const Index: NextPage = () => {
                         lineHeight={["normal", "tall"]}
                     >
                         Polygons are fun, there are endless combinations and
-                        shapes that can be formed and added to meaning.
+                        shapes that can be formed and added to meaning. Usign
+                        just polygons for design is weird at first until...
                     </Heading>
                 </Flex>
                 <Flex
@@ -424,11 +426,13 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
-                        mb={2}
+                        my={8}
+                        lineHeight="1.2"
                         as="h2"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
-                        Typography
+                        Typography & <br />
+                        Font families
                     </Heading>
                     <Heading
                         as="p"
