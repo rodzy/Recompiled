@@ -19,19 +19,13 @@ import { frontMatter as ideasPosts } from "../pages/ideas/*.mdx";
 import MiniItem from "../components/MiniItem";
 import Pilars from "../components/Pilars";
 import CoreTri from "../components/CoreTri";
-import Image from "next/image";
+import NextImage from "next/image";
 
 const LearnLink = styled(Link)`
     text-decoration: underline;
     &:hover {
         color: rgba(64, 158, 246, 0.7841);
         text-decoration: none;
-    }
-`;
-
-const CustomSpan = styled(Text)`
-    &:hover {
-        color: rgba(64, 158, 246, 0.7841);
     }
 `;
 
@@ -127,14 +121,15 @@ const Index: NextPage = () => {
                                 isExternal
                             >
                                 GitHub
-                            </LearnLink> and{" "}
+                            </LearnLink>{" "}
+                            and{" "}
                             <LearnLink
                                 href="https://twitter.com/rodzyrm"
                                 isExternal
                             >
                                 Twitter
-                            </LearnLink>.{" "} 
-                            Find more details in his about page
+                            </LearnLink>
+                            . Find more details in his about page
                         </Text>
                         <Flex justifyContent="flex-end">
                             <NextLink href="/about" passHref>
@@ -149,7 +144,7 @@ const Index: NextPage = () => {
                         </Flex>
                     </Box>
                     <Box pt={["1rem", 0]}>
-                        <Image
+                        <NextImage
                             src="/images/mirrored-by-rodzy.svg"
                             alt="mirrored-by-rodzy"
                             loading="lazy"
@@ -204,13 +199,8 @@ const Index: NextPage = () => {
                         size="xl"
                         fontWeight={700}
                     >
-                        Latest
+                        Latest posts
                     </Heading>
-                    <Text as="p" color={secondaryTextColor[colorMode]}>
-                        A list of curated posts about web development, best
-                        practices, and more detailed information about ongoing
-                        personal projects or OSS community tendencies.
-                    </Text>
                     <Flex flexDirection="column">
                         <Flex mt={4} flexDirection="column">
                             {blogPosts.map((item) => (
@@ -344,7 +334,7 @@ const Index: NextPage = () => {
                         textAlign="left"
                     >
                         The bases of Recompiled are found around minimalism,
-                        programming, typography and design.
+                        programming, typography and abstract design.
                     </Heading>
                 </Flex>
                 <Flex
@@ -361,11 +351,64 @@ const Index: NextPage = () => {
                                 fontStyle="italic"
                                 color={secondaryTextColor[colorMode]}
                             >
-                                Read:{" "}
-                                <CustomSpan as="span">
-                                    {" "}
-                                    "The four elements formula"
-                                </CustomSpan>
+                                Read: "The four elements formula"
+                            </Link>
+                        </NextLink>
+                    </Box>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                    mt={["2rem", "4rem"]}
+                    mb={8}
+                >
+                    <Heading
+                        letterSpacing="tight"
+                        my={8}
+                        as="h2"
+                        fontSize={["4xl", "5xl", "6xl"]}
+                        lineHeight="1"
+                    >
+                        Polygonal acceptance
+                    </Heading>
+                    <Heading
+                        as="p"
+                        color={secondaryTextColor[colorMode]}
+                        fontSize={["xl", "3xl"]}
+                        pb={[3, 6]}
+                        pr={[0, 0, "10rem"]}
+                        lineHeight={["normal", "tall"]}
+                    >
+                        Polygons are fun, there are endless combinations and
+                        shapes that can be formed and added to meaning.
+                    </Heading>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                    mb={8}
+                >
+                    <NextImage
+                        src="/images/Triangle-by-rodzy.svg"
+                        alt="Triangle by Rodzy"
+                        width={600}
+                        height={600}
+                        quality={100}
+                        loading="lazy"
+                    />
+                    <Box pt={3} textAlign="center">
+                        <NextLink href="/" passHref>
+                            <Link
+                                fontStyle="italic"
+                                color={secondaryTextColor[colorMode]}
+                            >
+                                Read: "Polygonal acceptance in abstract design"
                             </Link>
                         </NextLink>
                     </Box>
@@ -396,9 +439,9 @@ const Index: NextPage = () => {
                         lineHeight={["normal", "tall"]}
                         textAlign="left"
                     >
-                        Recompiled is a digital garden focused on explaining
-                        programming through great typography, minimalism and
-                        digital art.
+                        Font styles have been around physically for a long time,
+                        when digitized they are the essence of any web
+                        experience and there is a lot behind them.
                     </Heading>
                 </Flex>
                 <Flex
@@ -416,53 +459,12 @@ const Index: NextPage = () => {
                                 fontStyle="italic"
                                 color={secondaryTextColor[colorMode]}
                             >
-                                Read:{" "}
-                                <CustomSpan as="span">
-                                    {" "}
-                                    "Why fonts are the deciding factor?"
-                                </CustomSpan>
+                                Read: "Why fonts are the deciding factor?"
                             </Link>
                         </NextLink>
                     </Box>
                 </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    width="100%"
-                    mb={8}
-                >
-                    <Heading
-                        letterSpacing="tight"
-                        mb={2}
-                        as="h2"
-                        fontSize={["4xl", "5xl", "6xl"]}
-                    >
-                        Art
-                    </Heading>
-                    <Heading
-                        as="p"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pr={[0, 0, "10rem"]}
-                        lineHeight={["normal", "tall"]}
-                    >
-                        Sometimes posts are less boring when the concepts are
-                        explained in conjunction with visual representations.
-                    </Heading>
-                </Flex>
-                <Flex
-                    as="section"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    width="100%"
-                    mb={8}
-                >
-                    <Text as="span">Content soon</Text>
-                </Flex>
+
                 <Flex
                     as="section"
                     flexDirection="column"
