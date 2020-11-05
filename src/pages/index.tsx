@@ -7,6 +7,7 @@ import {
     Link,
     Button,
     Box,
+    Divider,
 } from "@chakra-ui/core";
 import { NextPage } from "next";
 import { secondaryTextColor } from "../styles/colors";
@@ -95,7 +96,7 @@ const Index: NextPage = () => {
                             ]}
                         >
                             He's an engineer, designer, and frontend web
-                            development enthusiast. He's focused on developing
+                            development enthusiast, focused on developing
                             creative and efficient software combining his coding
                             skills with his drive for great design and
                             accessibility to make sure his work doesn't go
@@ -120,15 +121,15 @@ const Index: NextPage = () => {
                                 isExternal
                             >
                                 GitHub
-                            </LearnLink>{" "}
-                            and{" "}
+                            </LearnLink>
+                            ,{" "}
                             <LearnLink
                                 href="https://twitter.com/rodzyrm"
                                 isExternal
                             >
                                 Twitter
-                            </LearnLink>
-                            . Find more details in his about page
+                            </LearnLink>{" "}
+                            or find more details on his about page
                         </Text>
                         <Flex justifyContent="flex-end">
                             <NextLink href="/about" passHref>
@@ -159,31 +160,47 @@ const Index: NextPage = () => {
                     justifyContent="flex-start"
                     alignItems="flex-start"
                     width="100%"
-                    my={8}
+                    mb={8}
                 >
-                    <Heading
-                        letterSpacing="tight"
-                        lineHeight={["1"]}
-                        my={8}
-                        as="h2"
-                        fontSize={["4xl", "5xl", "6xl"]}
+                    <Flex>
+                        <Heading
+                            letterSpacing="tight"
+                            lineHeight={["1"]}
+                            my={8}
+                            as="h2"
+                            fontSize={["4xl", "5xl", "6xl"]}
+                        >
+                            Digital <br />
+                            garden
+                        </Heading>
+                        <NextImage
+                            src="/images/Digital-growth-by-rodzy.svg"
+                            alt="Digital growth by rodzy"
+                            quality={100}
+                            loading="lazy"
+                            width={300}
+                            height={300}
+                        />
+                    </Flex>
+                    <Flex
+                        width="100%"
+                        justifyContent="center"
+                        alignItems="center"
                     >
-                        Digital <br />
-                        garden
-                    </Heading>
-                    <Heading
-                        as="p"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pr={[0, 0, "10rem"]}
-                        lineHeight={["normal", "tall"]}
-                        textAlign="left"
-                    >
-                        Isaac Rodríguez cultivates this garden with his
-                        experiences and knowledge about programming, web
-                        development and design.
-                    </Heading>
+                        <Heading
+                            as="p"
+                            color={secondaryTextColor[colorMode]}
+                            fontSize={["xl", "3xl"]}
+                            pb={[3, 6]}
+                            pr={[0, 0, "2rem"]}
+                            lineHeight={["normal", "tall"]}
+                            textAlign="left"
+                        >
+                            Isaac Rodríguez cultivates this garden with his
+                            experiences and knowledge about programming, web
+                            development and design.
+                        </Heading>
+                    </Flex>
                 </Flex>
                 <Flex
                     as="section"
@@ -192,15 +209,17 @@ const Index: NextPage = () => {
                     alignItems="flex-start"
                     width="100%"
                 >
-                    <Heading
-                        as="h3"
-                        letterSpacing="tight"
-                        mb={2}
-                        size="xl"
-                        fontWeight={700}
-                    >
-                        Latest posts
-                    </Heading>
+                    <Box width="100%">
+                        <Heading
+                            as="h3"
+                            letterSpacing="tight"
+                            lineHeight={["1"]}
+                            fontSize={["4xl", "5xl", "5xl"]}
+                        >
+                            Latest
+                        </Heading>
+                        <Divider />
+                    </Box>
                     <Flex flexDirection="column">
                         <Flex mt={4} flexDirection="column">
                             {blogPosts.map((item) => (
@@ -315,12 +334,32 @@ const Index: NextPage = () => {
                     width="100%"
                     my={8}
                 >
+                    <Box width="100%">
+                        <Heading
+                            as="h3"
+                            letterSpacing="tight"
+                            lineHeight={["1"]}
+                            fontSize={["4xl", "5xl", "5xl"]}
+                        >
+                            Popular
+                        </Heading>
+                        <Divider pt={2} />
+                    </Box>
+                </Flex>
+                <Flex
+                    as="section"
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                    width="100%"
+                    my={8}
+                >
                     <Heading
                         letterSpacing="tight"
                         lineHeight={["1"]}
-                        my={8}
-                        as="h2"
-                        fontSize={["4xl", "5xl", "6xl"]}
+                        mb={[2, 6]}
+                        as="h4"
+                        fontSize={["3xl", "4xl", "4xl"]}
                     >
                         The four
                         <br /> elements
@@ -328,7 +367,7 @@ const Index: NextPage = () => {
                     <Heading
                         as="p"
                         color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
+                        fontSize={["lg", "xl", "2xl"]}
                         pb={[3, 6]}
                         pr={[0, 0, "10rem"]}
                         lineHeight={["normal", "tall"]}
@@ -368,17 +407,18 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
-                        my={8}
-                        as="h2"
-                        fontSize={["4xl", "5xl", "6xl"]}
+                        mb={[2, 6]}
+                        as="h4"
+                        fontSize={["3xl", "4xl", "4xl"]}
                         lineHeight="1"
                     >
-                        Polygonal acceptance
+                        Polygonal <br />
+                        acceptance
                     </Heading>
                     <Heading
                         as="p"
                         color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
+                        fontSize={["lg", "xl", "2xl"]}
                         pb={[3, 6]}
                         pr={[0, 0, "10rem"]}
                         lineHeight={["normal", "tall"]}
@@ -426,18 +466,18 @@ const Index: NextPage = () => {
                 >
                     <Heading
                         letterSpacing="tight"
-                        my={8}
+                        mb={[2, 6]}
                         lineHeight="1.2"
-                        as="h2"
-                        fontSize={["4xl", "5xl", "6xl"]}
+                        as="h4"
+                        fontSize={["3xl", "4xl", "4xl"]}
                     >
                         Typography & <br />
-                        Font families
+                        font families
                     </Heading>
                     <Heading
                         as="p"
                         color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
+                        fontSize={["lg", "xl", "2xl"]}
                         pb={[3, 6]}
                         pr={[0, 0, "10rem"]}
                         lineHeight={["normal", "tall"]}
@@ -480,7 +520,7 @@ const Index: NextPage = () => {
                     <Heading
                         letterSpacing="tight"
                         mb={2}
-                        as="h3"
+                        as="h5"
                         fontSize={["4xl", "5xl", "6xl"]}
                     >
                         What's next?
