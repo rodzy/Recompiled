@@ -48,7 +48,7 @@ const NavBar: React.FC = () => {
             flexDirection="row"
             justifyContent="space-between"
             alignItems="center"
-            maxWidth="1000px"
+            maxWidth="1200px"
             width="100%"
             bg={navBgColor[colorMode]}
             as="nav"
@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
                 flexDirection="row"
                 justifyContent="space-between"
                 alignItems="center"
-                maxWidth="1000px"
+                maxWidth="1200px"
                 width="100%"
             >
                 <Box display="flex" flexDirection="row">

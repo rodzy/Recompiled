@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={theme}>
             <MDXProvider components={MDXComponents}>
-                <ColorModeProvider value="dark">
+                <ColorModeProvider value="light">
                     <GlobalStyle>
                         <Head>
                             <meta

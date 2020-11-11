@@ -41,34 +41,34 @@ const Index: NextPage = () => {
                 justifyContent="center"
                 alignItems="flex-start"
                 m="0 auto 3rem auto"
-                maxWidth="900px"
+                maxWidth="1000px"
             >
                 <Flex
                     as="section"
                     flexDirection="column"
                     justifyContent="flex-start"
                     alignItems="flex-start"
-                    maxWidth="850px"
+                    maxWidth="900px"
                 >
                     <Heading
                         letterSpacing="tight"
-                        mb={2}
                         as="h1"
-                        fontSize={["3.2rem", "5xl", "7rem"]}
+                        fontSize={["3.2rem", "5xl", "6rem"]}
+                        lineHeight={1.25}
+                        mb={2}
                     >
-                        Recompiled
+                        Hello.
+                        <br />
+                        I'm Isaac Rodríguez.
                     </Heading>
                     <Heading
                         as="p"
                         color={secondaryTextColor[colorMode]}
                         fontSize={["xl", "3xl"]}
-                        pb={[3, 6]}
-                        pr={[0, 0, "10rem"]}
+                        pb={[3, 0]}
                         lineHeight={["normal", "tall"]}
                     >
-                        Isaac Rodríguez&apos;s digital garden composed by blog
-                        posts, notes and ideas about programming and the modern
-                        web from his perspective.
+                        Frontend engineer and designer.
                     </Heading>
                 </Flex>
                 <Flex

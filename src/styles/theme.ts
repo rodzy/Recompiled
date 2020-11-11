@@ -46,7 +46,7 @@ const theme: DefaultTheme = {
         normal: "",
         short: "2.465rem",
         shorter: "",
-        tall: "",
+        tall: "3rem",
         taller: "",
     },
     icons: {
