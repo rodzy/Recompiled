@@ -7,6 +7,7 @@ import {
     useColorMode,
     Button,
     useDisclosure,
+    Link,
 } from "@chakra-ui/core";
 import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useRef, useState } from "react";
@@ -24,6 +25,15 @@ const StickyNav = styled(Flex)`
     top: 0;
     backdrop-filter: saturate(180%) blur(20px);
     transition: background-color 0.1 ease-in-out;
+`;
+
+const LearnLink = styled(Button)`
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+        color: rgba(64, 158, 246, 0.7841);
+    }
 `;
 
 const NavBar: React.FC = () => {
@@ -120,8 +130,8 @@ const NavBar: React.FC = () => {
                         flexGrow={1}
                     >
                         <NextLink href="/about" passHref>
-                            <Button
-                                variant="link"
+                            <LearnLink
+                                variant="ghost"
                                 display={[
                                     "block",
                                     windowH.currentScrollHeight === 0
@@ -129,16 +139,15 @@ const NavBar: React.FC = () => {
                                         : "none",
                                 ]}
                                 mt={[4, 0]}
-                                mr={6}
                             >
                                 About
-                            </Button>
+                            </LearnLink>
                         </NextLink>
 
                         <NextLink href="/newsletter" passHref>
-                            <Button
+                            <LearnLink
+                                variant="ghost"
                                 ml={[0, 4]}
-                                variant="link"
                                 display={[
                                     "block",
                                     windowH.currentScrollHeight === 0
@@ -146,15 +155,15 @@ const NavBar: React.FC = () => {
                                         : "none",
                                 ]}
                                 mt={[4, 0]}
-                                mr={6}
                             >
-                                Blog
-                            </Button>
+                                Digital Garden
+                            </LearnLink>
                         </NextLink>
+
                         <NextLink href="/newsletter" passHref>
-                            <Button
+                            <LearnLink
+                                variant="ghost"
                                 ml={[0, 4]}
-                                variant="link"
                                 display={[
                                     "block",
                                     windowH.currentScrollHeight === 0
@@ -162,42 +171,9 @@ const NavBar: React.FC = () => {
                                         : "none",
                                 ]}
                                 mt={[4, 0]}
-                                mr={6}
-                            >
-                                Notes
-                            </Button>
-                        </NextLink>
-                        <NextLink href="/newsletter" passHref>
-                            <Button
-                                ml={[0, 4]}
-                                variant="link"
-                                display={[
-                                    "block",
-                                    windowH.currentScrollHeight === 0
-                                        ? "block"
-                                        : "none",
-                                ]}
-                                mt={[4, 0]}
-                                mr={6}
-                            >
-                                Ideas
-                            </Button>
-                        </NextLink>
-                        <NextLink href="/newsletter" passHref>
-                            <Button
-                                ml={[0, 4]}
-                                variant="link"
-                                display={[
-                                    "block",
-                                    windowH.currentScrollHeight === 0
-                                        ? "block"
-                                        : "none",
-                                ]}
-                                mt={[4, 0]}
-                                mr={6}
                             >
                                 Newsletter
-                            </Button>
+                            </LearnLink>
                         </NextLink>
                     </Box>
                     <IconButton
