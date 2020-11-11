@@ -68,7 +68,7 @@ const Index: NextPage = () => {
                         pb={[3, 0]}
                         lineHeight={["normal", "tall"]}
                     >
-                        Frontend engineer and designer.
+                        Software Engineer in Costa Rica
                     </Heading>
                 </Flex>
                 <Flex
@@ -80,58 +80,50 @@ const Index: NextPage = () => {
                     mb={8}
                 >
                     <Box width={["100%", "100%", "50%"]}>
-                        <Heading as="h2" fontSize={["xl", "2xl"]}>
-                            Who is Isaac Rodríguez?{" "}
-                        </Heading>
                         <Text
                             as="p"
                             my={2}
                             fontSize={["md", "xl"]}
                             color={secondaryTextColor[colorMode]}
-                            textAlign={[
-                                "initial",
-                                "initial",
-                                "initial",
-                                "justify",
-                            ]}
+                            textAlign="initial"
                         >
-                            He's an engineer, designer, and frontend web
-                            development enthusiast, focused on developing
-                            creative and efficient software combining his coding
-                            skills with his drive for great design and
-                            accessibility to make sure his work doesn't go
-                            unnoticed.
-                        </Text>
-                        <Text
-                            as="p"
-                            my={2}
-                            fontSize={["md", "xl"]}
-                            color={secondaryTextColor[colorMode]}
-                            textAlign={[
-                                "initial",
-                                "initial",
-                                "initial",
-                                "justify",
-                            ]}
-                        >
-                            He's a fan of polyhedras, geometrical shapes and
-                            abstract designs. You can find him on{" "}
+                            I'm an frontend engineer and designer, focused on
+                            developing creative and efficient software. I'm a
+                            proactive Open Source contributor, If you're
+                            interested on any of my work checkout my{" "}
                             <LearnLink
                                 href="https://github.com/rodzy"
                                 isExternal
                             >
-                                GitHub
+                                GitHub.
                             </LearnLink>
-                            ,{" "}
-                            <LearnLink
-                                href="https://twitter.com/rodzyrm"
-                                isExternal
-                            >
-                                Twitter
-                            </LearnLink>{" "}
-                            or find more details on his about page
                         </Text>
-                        <Flex justifyContent="flex-end">
+                        <Text
+                            as="p"
+                            my={2}
+                            fontSize={["md", "xl"]}
+                            color={secondaryTextColor[colorMode]}
+                            textAlign="initial"
+                        >
+                            Feel free to explore my{" "}
+                            <NextLink href="/newsletter" passHref>
+                                <LearnLink>Digital Garden</LearnLink>
+                            </NextLink>{" "}
+                            where I explain programming, modern web development
+                            and design through blog posts, notes and ideas
+                        </Text>
+                        <Text
+                            as="p"
+                            my={2}
+                            fontSize={["md", "xl"]}
+                            color={secondaryTextColor[colorMode]}
+                            textAlign="initial"
+                        >
+                            Fun fact I'm a fan of polyhedras, geometrical shapes
+                            and abstract designs. Find more details on my about
+                            page.
+                        </Text>
+                        <Flex justifyContent="flex-end" pt={3}>
                             <NextLink href="/about" passHref>
                                 <Button
                                     rightIcon="arrow-forward"
