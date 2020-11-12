@@ -7,7 +7,6 @@ import {
     useColorMode,
     Button,
     useDisclosure,
-    Link,
 } from "@chakra-ui/core";
 import { navBgColor } from "../../styles/colors";
 import React, { useEffect, useRef, useState } from "react";
@@ -23,7 +22,7 @@ const StickyNav = styled(Flex)`
     position: sticky;
     z-index: 10;
     top: 0;
-    backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(8px);
     transition: background-color 0.1 ease-in-out;
 `;
 

@@ -45,31 +45,34 @@ const Index: NextPage = () => {
             >
                 <Flex
                     as="section"
-                    flexDirection="column"
+                    flexDirection="row"
                     justifyContent="flex-start"
                     alignItems="flex-start"
                     maxWidth="900px"
                 >
-                    <Heading
-                        letterSpacing="tight"
-                        as="h1"
-                        fontSize={["3.2rem", "5xl", "6rem"]}
-                        lineHeight={1.25}
-                        mb={2}
-                    >
-                        Hello.
-                        <br />
-                        I'm Isaac Rodríguez.
-                    </Heading>
-                    <Heading
-                        as="p"
-                        color={secondaryTextColor[colorMode]}
-                        fontSize={["xl", "3xl"]}
-                        pb={[3, 0]}
-                        lineHeight={["normal", "tall"]}
-                    >
-                        Software Engineer in Costa Rica
-                    </Heading>
+                    <Flex flexDirection="column">
+                        <Heading
+                            letterSpacing="tight"
+                            as="h1"
+                            fontSize={["3.2rem", "5xl", "6rem"]}
+                            lineHeight={1.25}
+                            mb={2}
+                        >
+                            Hello.
+                            <br />
+                            I'm Isaac Rodríguez.
+                        </Heading>
+                        <Heading
+                            as="p"
+                            color={secondaryTextColor[colorMode]}
+                            fontSize={["xl", "3xl"]}
+                            pb={[3, 0]}
+                            lineHeight={["normal", "tall"]}
+                        >
+                            Software Engineer in Costa Rica
+                        </Heading>
+                    </Flex>
+                    
                 </Flex>
                 <Flex
                     as="section"
